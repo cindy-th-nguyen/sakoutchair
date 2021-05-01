@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>169009668575-o05mnker09rpk9fteorue8rglf0fle0p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.169009668575-o05mnker09rpk9fteorue8rglf0fle0p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyANfjANP9eXG0IvLuNOgPIDxWNBiM8ANio</string>
+	<key>GCM_SENDER_ID</key>
+	<string>169009668575</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>fr.sakoutchair.SakoutChair</string>
+	<key>PROJECT_ID</key>
+	<string>sakoutchair</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sakoutchair.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:169009668575:ios:2bab50bfb6c2dc9a2da46a</string>
+</dict>
+</plist>

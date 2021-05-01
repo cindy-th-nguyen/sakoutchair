@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0593E60F79BFFC3177CDB92E /* Pods_SakoutChair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11468AF5C72A798067F340FB /* Pods_SakoutChair.framework */; };
+		2501521760C6B80828AE9A80 /* Pods_SakoutChairTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0960122EAC9A7A23E8F2DF84 /* Pods_SakoutChairTests.framework */; };
+		7B19C198263D76FA00056E94 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B19C197263D76FA00056E94 /* HomeViewController.swift */; };
+		7B1D0D3A263ACBC4006C9E2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D0D39263ACBC4006C9E2A /* GoogleService-Info.plist */; };
+		7B1D0D47263ACF2B006C9E2A /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */; };
+		7B1D0DF9263B4E7E006C9E2A /* work.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D0DF8263B4E7D006C9E2A /* work.json */; };
+		7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCB54F263AC786007A395C /* AuthViewController.swift */; };
+		7BDF3021263DFB6100CE5F0B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3020263DFB6100CE5F0B /* CustomColors.swift */; };
+		7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF302B263E135600CE5F0B /* SignUpViewController.swift */; };
+		7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38326356244009FC0DC /* AppDelegate.swift */; };
+		7BF5F38626356244009FC0DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38526356244009FC0DC /* SceneDelegate.swift */; };
+		7BF5F38826356244009FC0DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38726356244009FC0DC /* ViewController.swift */; };
+		7BF5F38B26356244009FC0DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF5F38926356244009FC0DC /* Main.storyboard */; };
+		7BF5F38D26356247009FC0DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF5F38C26356247009FC0DC /* Assets.xcassets */; };
+		7BF5F39026356247009FC0DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF5F38E26356247009FC0DC /* LaunchScreen.storyboard */; };
+		7BF5F39B26356247009FC0DC /* SakoutChairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F39A26356247009FC0DC /* SakoutChairTests.swift */; };
+		7BF5F3A626356248009FC0DC /* SakoutChairUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F3A526356248009FC0DC /* SakoutChairUITests.swift */; };
+		EB2580B215D9957AE1D20832 /* Pods_SakoutChair_SakoutChairUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22A673A797BF80A5D4D9039 /* Pods_SakoutChair_SakoutChairUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BF5F39726356247009FC0DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BF5F37826356244009FC0DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF5F37F26356244009FC0DC;
+			remoteInfo = SakoutChair;
+		};
+		7BF5F3A226356248009FC0DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BF5F37826356244009FC0DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF5F37F26356244009FC0DC;
+			remoteInfo = SakoutChair;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0960122EAC9A7A23E8F2DF84 /* Pods_SakoutChairTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SakoutChairTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11468AF5C72A798067F340FB /* Pods_SakoutChair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SakoutChair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1DCCC8A702DC30FC85CE98 /* Pods-SakoutChairTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChairTests.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChairTests/Pods-SakoutChairTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B19C197263D76FA00056E94 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7B1D0D39263ACBC4006C9E2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		7B1D0DF8263B4E7D006C9E2A /* work.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = work.json; sourceTree = "<group>"; };
+		7BCCB54F263AC786007A395C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		7BDF3020263DFB6100CE5F0B /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		7BDF302B263E135600CE5F0B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7BF5F38026356244009FC0DC /* SakoutChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SakoutChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF5F38326356244009FC0DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BF5F38526356244009FC0DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7BF5F38726356244009FC0DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BF5F38A26356244009FC0DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BF5F38C26356247009FC0DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BF5F38F26356247009FC0DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BF5F39126356247009FC0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BF5F39626356247009FC0DC /* SakoutChairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SakoutChairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF5F39A26356247009FC0DC /* SakoutChairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakoutChairTests.swift; sourceTree = "<group>"; };
+		7BF5F39C26356247009FC0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BF5F3A126356248009FC0DC /* SakoutChairUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SakoutChairUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF5F3A526356248009FC0DC /* SakoutChairUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakoutChairUITests.swift; sourceTree = "<group>"; };
+		7BF5F3A726356248009FC0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99214BAE2E215A3B866A4AEB /* Pods-SakoutChair-SakoutChairUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair-SakoutChairUITests.release.xcconfig"; path = "Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A5790970D7FCBDC7B68F7AC7 /* Pods-SakoutChair-SakoutChairUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair-SakoutChairUITests.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C03C1800B09D1D2345805587 /* Pods-SakoutChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChair/Pods-SakoutChair.debug.xcconfig"; sourceTree = "<group>"; };
+		D4CFF9A71E7CAB0F22C44971 /* Pods-SakoutChair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair.release.xcconfig"; path = "Target Support Files/Pods-SakoutChair/Pods-SakoutChair.release.xcconfig"; sourceTree = "<group>"; };
+		ECD3B5F9B013853061AF15E7 /* Pods-SakoutChairTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChairTests.release.xcconfig"; path = "Target Support Files/Pods-SakoutChairTests/Pods-SakoutChairTests.release.xcconfig"; sourceTree = "<group>"; };
+		F22A673A797BF80A5D4D9039 /* Pods_SakoutChair_SakoutChairUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SakoutChair_SakoutChairUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BF5F37D26356244009FC0DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0593E60F79BFFC3177CDB92E /* Pods_SakoutChair.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF5F39326356247009FC0DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2501521760C6B80828AE9A80 /* Pods_SakoutChairTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF5F39E26356247009FC0DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB2580B215D9957AE1D20832 /* Pods_SakoutChair_SakoutChairUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B19C193263D749B00056E94 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7B19C197263D76FA00056E94 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7BCCB54E263AC6F3007A395C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7BCCB54F263AC786007A395C /* AuthViewController.swift */,
+				7BDF302B263E135600CE5F0B /* SignUpViewController.swift */,
+				7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		7BDF301F263DF97A00CE5F0B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7BDF3020263DFB6100CE5F0B /* CustomColors.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7BF5F37726356244009FC0DC = {
+			isa = PBXGroup;
+			children = (
+				7BF5F38226356244009FC0DC /* SakoutChair */,
+				7BF5F39926356247009FC0DC /* SakoutChairTests */,
+				7BF5F3A426356248009FC0DC /* SakoutChairUITests */,
+				7BF5F38126356244009FC0DC /* Products */,
+				7EBEF2FE1499BA581C76B1C9 /* Pods */,
+				844156700E8715720EA9BD06 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BF5F38126356244009FC0DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BF5F38026356244009FC0DC /* SakoutChair.app */,
+				7BF5F39626356247009FC0DC /* SakoutChairTests.xctest */,
+				7BF5F3A126356248009FC0DC /* SakoutChairUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BF5F38226356244009FC0DC /* SakoutChair */ = {
+			isa = PBXGroup;
+			children = (
+				7BDF301F263DF97A00CE5F0B /* Extension */,
+				7B19C193263D749B00056E94 /* Home */,
+				7BCCB54E263AC6F3007A395C /* Auth */,
+				7BF5F38326356244009FC0DC /* AppDelegate.swift */,
+				7BF5F38526356244009FC0DC /* SceneDelegate.swift */,
+				7BF5F38726356244009FC0DC /* ViewController.swift */,
+				7BF5F38926356244009FC0DC /* Main.storyboard */,
+				7BF5F38C26356247009FC0DC /* Assets.xcassets */,
+				7BF5F38E26356247009FC0DC /* LaunchScreen.storyboard */,
+				7B1D0D39263ACBC4006C9E2A /* GoogleService-Info.plist */,
+				7BF5F39126356247009FC0DC /* Info.plist */,
+				7B1D0DF8263B4E7D006C9E2A /* work.json */,
+			);
+			path = SakoutChair;
+			sourceTree = "<group>";
+		};
+		7BF5F39926356247009FC0DC /* SakoutChairTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BF5F39A26356247009FC0DC /* SakoutChairTests.swift */,
+				7BF5F39C26356247009FC0DC /* Info.plist */,
+			);
+			path = SakoutChairTests;
+			sourceTree = "<group>";
+		};
+		7BF5F3A426356248009FC0DC /* SakoutChairUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BF5F3A526356248009FC0DC /* SakoutChairUITests.swift */,
+				7BF5F3A726356248009FC0DC /* Info.plist */,
+			);
+			path = SakoutChairUITests;
+			sourceTree = "<group>";
+		};
+		7EBEF2FE1499BA581C76B1C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C03C1800B09D1D2345805587 /* Pods-SakoutChair.debug.xcconfig */,
+				D4CFF9A71E7CAB0F22C44971 /* Pods-SakoutChair.release.xcconfig */,
+				A5790970D7FCBDC7B68F7AC7 /* Pods-SakoutChair-SakoutChairUITests.debug.xcconfig */,
+				99214BAE2E215A3B866A4AEB /* Pods-SakoutChair-SakoutChairUITests.release.xcconfig */,
+				3F1DCCC8A702DC30FC85CE98 /* Pods-SakoutChairTests.debug.xcconfig */,
+				ECD3B5F9B013853061AF15E7 /* Pods-SakoutChairTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		844156700E8715720EA9BD06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11468AF5C72A798067F340FB /* Pods_SakoutChair.framework */,
+				F22A673A797BF80A5D4D9039 /* Pods_SakoutChair_SakoutChairUITests.framework */,
+				0960122EAC9A7A23E8F2DF84 /* Pods_SakoutChairTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BF5F37F26356244009FC0DC /* SakoutChair */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BF5F3AA26356248009FC0DC /* Build configuration list for PBXNativeTarget "SakoutChair" */;
+			buildPhases = (
+				BD7AA9108050BAFA8626BC32 /* [CP] Check Pods Manifest.lock */,
+				7BF5F37C26356244009FC0DC /* Sources */,
+				7BF5F37D26356244009FC0DC /* Frameworks */,
+				7BF5F37E26356244009FC0DC /* Resources */,
+				517EA0A39499079A093DC12D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SakoutChair;
+			productName = SakoutChair;
+			productReference = 7BF5F38026356244009FC0DC /* SakoutChair.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BF5F39526356247009FC0DC /* SakoutChairTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BF5F3AD26356248009FC0DC /* Build configuration list for PBXNativeTarget "SakoutChairTests" */;
+			buildPhases = (
+				DE66F9C5B73B4F78341C2377 /* [CP] Check Pods Manifest.lock */,
+				7BF5F39226356247009FC0DC /* Sources */,
+				7BF5F39326356247009FC0DC /* Frameworks */,
+				7BF5F39426356247009FC0DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BF5F39826356247009FC0DC /* PBXTargetDependency */,
+			);
+			name = SakoutChairTests;
+			productName = SakoutChairTests;
+			productReference = 7BF5F39626356247009FC0DC /* SakoutChairTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BF5F3A026356247009FC0DC /* SakoutChairUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BF5F3B026356248009FC0DC /* Build configuration list for PBXNativeTarget "SakoutChairUITests" */;
+			buildPhases = (
+				1E1A2C3003104591DBB51C16 /* [CP] Check Pods Manifest.lock */,
+				7BF5F39D26356247009FC0DC /* Sources */,
+				7BF5F39E26356247009FC0DC /* Frameworks */,
+				7BF5F39F26356247009FC0DC /* Resources */,
+				8EB16DCB04231C463A35AE89 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BF5F3A326356248009FC0DC /* PBXTargetDependency */,
+			);
+			name = SakoutChairUITests;
+			productName = SakoutChairUITests;
+			productReference = 7BF5F3A126356248009FC0DC /* SakoutChairUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BF5F37826356244009FC0DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					7BF5F37F26356244009FC0DC = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					7BF5F39526356247009FC0DC = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 7BF5F37F26356244009FC0DC;
+					};
+					7BF5F3A026356247009FC0DC = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 7BF5F37F26356244009FC0DC;
+					};
+				};
+			};
+			buildConfigurationList = 7BF5F37B26356244009FC0DC /* Build configuration list for PBXProject "SakoutChair" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BF5F37726356244009FC0DC;
+			productRefGroup = 7BF5F38126356244009FC0DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BF5F37F26356244009FC0DC /* SakoutChair */,
+				7BF5F39526356247009FC0DC /* SakoutChairTests */,
+				7BF5F3A026356247009FC0DC /* SakoutChairUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BF5F37E26356244009FC0DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B1D0D3A263ACBC4006C9E2A /* GoogleService-Info.plist in Resources */,
+				7B1D0DF9263B4E7E006C9E2A /* work.json in Resources */,
+				7BF5F39026356247009FC0DC /* LaunchScreen.storyboard in Resources */,
+				7BF5F38D26356247009FC0DC /* Assets.xcassets in Resources */,
+				7BF5F38B26356244009FC0DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF5F39426356247009FC0DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF5F39F26356247009FC0DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E1A2C3003104591DBB51C16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SakoutChair-SakoutChairUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		517EA0A39499079A093DC12D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SakoutChair/Pods-SakoutChair-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SakoutChair/Pods-SakoutChair-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SakoutChair/Pods-SakoutChair-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EB16DCB04231C463A35AE89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD7AA9108050BAFA8626BC32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SakoutChair-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE66F9C5B73B4F78341C2377 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SakoutChairTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BF5F37C26356244009FC0DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */,
+				7BF5F38826356244009FC0DC /* ViewController.swift in Sources */,
+				7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */,
+				7BDF3021263DFB6100CE5F0B /* CustomColors.swift in Sources */,
+				7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */,
+				7BF5F38626356244009FC0DC /* SceneDelegate.swift in Sources */,
+				7B1D0D47263ACF2B006C9E2A /* FirebaseAuthManager.swift in Sources */,
+				7B19C198263D76FA00056E94 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF5F39226356247009FC0DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BF5F39B26356247009FC0DC /* SakoutChairTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF5F39D26356247009FC0DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BF5F3A626356248009FC0DC /* SakoutChairUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BF5F39826356247009FC0DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF5F37F26356244009FC0DC /* SakoutChair */;
+			targetProxy = 7BF5F39726356247009FC0DC /* PBXContainerItemProxy */;
+		};
+		7BF5F3A326356248009FC0DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF5F37F26356244009FC0DC /* SakoutChair */;
+			targetProxy = 7BF5F3A226356248009FC0DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7BF5F38926356244009FC0DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BF5F38A26356244009FC0DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7BF5F38E26356247009FC0DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BF5F38F26356247009FC0DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BF5F3A826356248009FC0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BF5F3A926356248009FC0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BF5F3AB26356248009FC0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03C1800B09D1D2345805587 /* Pods-SakoutChair.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V7TP3PAUD;
+				INFOPLIST_FILE = SakoutChair/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sakoutchair.SakoutChair;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BF5F3AC26356248009FC0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4CFF9A71E7CAB0F22C44971 /* Pods-SakoutChair.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V7TP3PAUD;
+				INFOPLIST_FILE = SakoutChair/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sakoutchair.SakoutChair;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7BF5F3AE26356248009FC0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F1DCCC8A702DC30FC85CE98 /* Pods-SakoutChairTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V7TP3PAUD;
+				INFOPLIST_FILE = SakoutChairTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sakoutchair.SakoutChairTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SakoutChair.app/SakoutChair";
+			};
+			name = Debug;
+		};
+		7BF5F3AF26356248009FC0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD3B5F9B013853061AF15E7 /* Pods-SakoutChairTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V7TP3PAUD;
+				INFOPLIST_FILE = SakoutChairTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sakoutchair.SakoutChairTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SakoutChair.app/SakoutChair";
+			};
+			name = Release;
+		};
+		7BF5F3B126356248009FC0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5790970D7FCBDC7B68F7AC7 /* Pods-SakoutChair-SakoutChairUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V7TP3PAUD;
+				INFOPLIST_FILE = SakoutChairUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sakoutchair.SakoutChairUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SakoutChair;
+			};
+			name = Debug;
+		};
+		7BF5F3B226356248009FC0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99214BAE2E215A3B866A4AEB /* Pods-SakoutChair-SakoutChairUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9V7TP3PAUD;
+				INFOPLIST_FILE = SakoutChairUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sakoutchair.SakoutChairUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SakoutChair;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BF5F37B26356244009FC0DC /* Build configuration list for PBXProject "SakoutChair" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BF5F3A826356248009FC0DC /* Debug */,
+				7BF5F3A926356248009FC0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BF5F3AA26356248009FC0DC /* Build configuration list for PBXNativeTarget "SakoutChair" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BF5F3AB26356248009FC0DC /* Debug */,
+				7BF5F3AC26356248009FC0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BF5F3AD26356248009FC0DC /* Build configuration list for PBXNativeTarget "SakoutChairTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BF5F3AE26356248009FC0DC /* Debug */,
+				7BF5F3AF26356248009FC0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BF5F3B026356248009FC0DC /* Build configuration list for PBXNativeTarget "SakoutChairUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BF5F3B126356248009FC0DC /* Debug */,
+				7BF5F3B226356248009FC0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BF5F37826356244009FC0DC /* Project object */;
+}
