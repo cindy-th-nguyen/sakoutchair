@@ -53,7 +53,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func logInButtonDidTap(_ sender: Any) {
-        guard let email = emailTextfield.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+        guard let email = emailTextfield.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
             self.errorLabel.isHidden = false
             self.errorLabel.text = "Your email or your password is empty!"
             return
@@ -76,7 +77,12 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             strongSelf.view.addSubview(navigation.view)
             strongSelf.addChild(navigation)
             navigation.didMove(toParent: self)
-            print("You have signed in")
         }
+    }
+    
+    @IBAction func signUpButtonDidTap(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let signUpViewController = storyBoard.instantiateViewController(withIdentifier: "signUp") as! SignUpViewController
+        self.navigationController!.pushViewController(signUpViewController, animated: true)
     }
 }
