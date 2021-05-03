@@ -16,6 +16,7 @@
 		7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCB54F263AC786007A395C /* AuthViewController.swift */; };
 		7BDF3021263DFB6100CE5F0B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3020263DFB6100CE5F0B /* CustomColors.swift */; };
 		7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF302B263E135600CE5F0B /* SignUpViewController.swift */; };
+		7BDF305A263EF60500CE5F0B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3059263EF60500CE5F0B /* ResetPasswordViewController.swift */; };
 		7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38326356244009FC0DC /* AppDelegate.swift */; };
 		7BF5F38626356244009FC0DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38526356244009FC0DC /* SceneDelegate.swift */; };
 		7BF5F38826356244009FC0DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38726356244009FC0DC /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		7BCCB54F263AC786007A395C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		7BDF3020263DFB6100CE5F0B /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		7BDF302B263E135600CE5F0B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7BDF3059263EF60500CE5F0B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		7BF5F38026356244009FC0DC /* SakoutChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SakoutChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF5F38326356244009FC0DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BF5F38526356244009FC0DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				7BCCB54F263AC786007A395C /* AuthViewController.swift */,
 				7BDF302B263E135600CE5F0B /* SignUpViewController.swift */,
 				7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */,
+				7BDF3059263EF60500CE5F0B /* ResetPasswordViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDF305A263EF60500CE5F0B /* ResetPasswordViewController.swift in Sources */,
 				7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */,
 				7BF5F38826356244009FC0DC /* ViewController.swift in Sources */,
 				7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */,

@@ -256,7 +256,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjM-F2-aYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="-1138.3928571428571"/>
+            <point key="canvasLocation" x="138" y="-1444"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yrq-H3-lEm">
+            <objects>
+                <viewController id="6Tf-Ic-GuL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="18n-br-kik">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnY-ti-hbr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SakoutChair." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8Q-BN-Yjk">
+                                        <rect key="frame" x="15" y="150" width="389" height="52"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESET PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-gy-NGK">
+                                        <rect key="frame" x="15" y="210" width="379" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77454036500000001" green="0.9022723117" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="hJj-gy-NGK" firstAttribute="top" secondItem="F8Q-BN-Yjk" secondAttribute="bottom" constant="8" symbolic="YES" id="1SY-XX-42r"/>
+                                    <constraint firstAttribute="trailing" secondItem="F8Q-BN-Yjk" secondAttribute="trailing" constant="10" id="FbA-Fp-fu1"/>
+                                    <constraint firstAttribute="bottom" secondItem="hJj-gy-NGK" secondAttribute="bottom" constant="45" id="HRV-Uo-CEn"/>
+                                    <constraint firstItem="F8Q-BN-Yjk" firstAttribute="leading" secondItem="cnY-ti-hbr" secondAttribute="leading" constant="15" id="R6f-p3-dsg"/>
+                                    <constraint firstItem="hJj-gy-NGK" firstAttribute="leading" secondItem="F8Q-BN-Yjk" secondAttribute="leading" id="dLC-ZW-G3S"/>
+                                    <constraint firstAttribute="trailing" secondItem="hJj-gy-NGK" secondAttribute="trailing" constant="20" id="m9Y-TI-QEu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cnY-ti-hbr" secondAttribute="bottom" constant="602" id="0ko-A4-Ly6"/>
+                            <constraint firstAttribute="trailing" secondItem="cnY-ti-hbr" secondAttribute="trailing" id="qyZ-ea-TPW"/>
+                            <constraint firstItem="cnY-ti-hbr" firstAttribute="leading" secondItem="18n-br-kik" secondAttribute="leading" id="r1f-8p-gRo"/>
+                            <constraint firstItem="cnY-ti-hbr" firstAttribute="top" secondItem="18n-br-kik" secondAttribute="top" id="yPV-v1-wEi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTB-wQ-EGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-787"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
