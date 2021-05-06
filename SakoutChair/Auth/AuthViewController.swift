@@ -33,8 +33,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         emailTextfield.placeholder = "Email"
         passwordTextField.placeholder = "Password"
         
-        logInButton.layer.cornerRadius = 25
-        signUpButton.layer.cornerRadius = 25
+        logInButton.layer.cornerRadius = 20
+        signUpButton.layer.cornerRadius = 20
         signUpButton.layer.borderWidth = 5
         
         titleLabel.textColor = UIColor.CustomColor.customDarkBlue
@@ -84,5 +84,11 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let signUpViewController = storyBoard.instantiateViewController(withIdentifier: "signUp") as! SignUpViewController
         self.navigationController!.pushViewController(signUpViewController, animated: true)
+    }
+    
+    @IBAction func forgotPasswordButtonDidTap(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let resetPasswordViewController = storyBoard.instantiateViewController(withIdentifier: "resetPassword") as! ResetPasswordViewController
+        self.navigationController?.present(resetPasswordViewController, animated: true)
     }
 }

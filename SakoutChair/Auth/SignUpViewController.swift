@@ -67,6 +67,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func signInButtonDidTap(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let authViewController = storyBoard.instantiateViewController(withIdentifier: "auth") as! AuthViewController
+        self.navigationController!.pushViewController(authViewController, animated: true)
+    }
+    
+    
     func displayErrorLabel() -> String {
         if !isValidEmail(emailTextField.text ?? "") {
             return "Your email is incorrect"

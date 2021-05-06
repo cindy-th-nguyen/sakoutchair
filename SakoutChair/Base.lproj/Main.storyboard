@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilZ-IX-RyA">
                                 <rect key="frame" x="30" y="462" width="184" height="30"/>
                                 <state key="normal" title="Forgot Password ?"/>
+                                <connections>
+                                    <action selector="forgotPasswordButtonDidTap:" destination="vhL-LW-DJz" eventType="touchUpInside" id="B2A-KM-WJt"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZU-WX-vZu">
                                 <rect key="frame" x="30" y="354" width="354" height="34"/>
@@ -215,11 +218,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="mmu-9C-zLm">
+                                <rect key="frame" x="30" y="715" width="354" height="29"/>
+                                <state key="normal" title="Already have an account? Click here"/>
+                                <connections>
+                                    <action selector="signInButtonDidTap:" destination="Rvg-GT-WxJ" eventType="touchUpInside" id="6t9-ih-Xme"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YYa-VU-oB1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YYa-VU-oB1" firstAttribute="trailing" secondItem="hIF-CP-GuV" secondAttribute="trailing" constant="30" id="2Ug-vZ-Jgr"/>
+                            <constraint firstItem="YYa-VU-oB1" firstAttribute="trailing" secondItem="mmu-9C-zLm" secondAttribute="trailing" constant="30" id="4Xq-v3-V0D"/>
                             <constraint firstItem="tjF-yv-oYh" firstAttribute="top" secondItem="Rdn-Zi-roN" secondAttribute="bottom" constant="25" id="4ac-5j-ObR"/>
                             <constraint firstItem="6BQ-jv-ayT" firstAttribute="leading" secondItem="hIF-CP-GuV" secondAttribute="leading" id="7ey-0w-r2J"/>
                             <constraint firstItem="DGj-X1-Iw4" firstAttribute="top" secondItem="udt-4k-Kq2" secondAttribute="bottom" constant="60" id="9cf-jk-IWB"/>
@@ -229,6 +240,7 @@
                             <constraint firstItem="6BQ-jv-ayT" firstAttribute="top" secondItem="hIF-CP-GuV" secondAttribute="bottom" constant="23" id="I1G-co-liE"/>
                             <constraint firstItem="6BQ-jv-ayT" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="OGU-sW-6Yo"/>
                             <constraint firstItem="DGj-X1-Iw4" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="Rho-IH-DDr"/>
+                            <constraint firstItem="mmu-9C-zLm" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="aAi-6o-9aj"/>
                             <constraint firstItem="YYa-VU-oB1" firstAttribute="trailing" secondItem="npK-al-4wA" secondAttribute="trailing" constant="30" id="aTp-LJ-Icd"/>
                             <constraint firstItem="npK-al-4wA" firstAttribute="top" secondItem="hIF-CP-GuV" secondAttribute="bottom" constant="70" id="aV3-rR-r7a"/>
                             <constraint firstItem="Rdn-Zi-roN" firstAttribute="top" secondItem="DGj-X1-Iw4" secondAttribute="bottom" constant="25" id="bsc-OC-NhB"/>
@@ -236,9 +248,11 @@
                             <constraint firstItem="YYa-VU-oB1" firstAttribute="trailing" secondItem="DGj-X1-Iw4" secondAttribute="trailing" constant="30" id="hty-6V-8yf"/>
                             <constraint firstItem="YYa-VU-oB1" firstAttribute="trailing" secondItem="6BQ-jv-ayT" secondAttribute="trailing" constant="30" id="iZK-1S-0ZA"/>
                             <constraint firstItem="npK-al-4wA" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="m3B-gT-J6O"/>
+                            <constraint firstItem="mmu-9C-zLm" firstAttribute="top" secondItem="npK-al-4wA" secondAttribute="bottom" constant="25" id="mKG-ZM-Xg8"/>
                             <constraint firstItem="hIF-CP-GuV" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="mn1-qy-Z67"/>
                             <constraint firstItem="udt-4k-Kq2" firstAttribute="trailing" secondItem="YYa-VU-oB1" secondAttribute="trailing" id="v1d-bv-JCc"/>
                             <constraint firstItem="YYa-VU-oB1" firstAttribute="trailing" secondItem="Rdn-Zi-roN" secondAttribute="trailing" constant="30" id="vah-Vd-nBD"/>
+                            <constraint firstItem="YYa-VU-oB1" firstAttribute="bottom" secondItem="mmu-9C-zLm" secondAttribute="bottom" constant="118" id="vv8-Q4-mH0"/>
                             <constraint firstItem="tjF-yv-oYh" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="x1H-nz-cPZ"/>
                             <constraint firstItem="Rdn-Zi-roN" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="yhN-eV-AYP"/>
                         </constraints>
@@ -258,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="138" y="-1444"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset Password View Controller-->
         <scene sceneID="Yrq-H3-lEm">
             <objects>
-                <viewController id="6Tf-Ic-GuL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resetPassword" id="6Tf-Ic-GuL" customClass="ResetPasswordViewController" customModule="SakoutChair" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="18n-br-kik">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,15 +306,39 @@
                                     <constraint firstAttribute="trailing" secondItem="hJj-gy-NGK" secondAttribute="trailing" constant="20" id="m9Y-TI-QEu"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gf4-Np-OXh">
+                                <rect key="frame" x="30" y="394" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-Zb-Wac">
+                                <rect key="frame" x="30" y="473" width="354" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.74603806530000005" blue="0.74773791450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetButtonDidTap:" destination="6Tf-Ic-GuL" eventType="touchUpInside" id="xYC-Aw-UDw"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="tHH-Qy-UFl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cnY-ti-hbr" secondAttribute="bottom" constant="602" id="0ko-A4-Ly6"/>
+                            <constraint firstItem="TOt-Zb-Wac" firstAttribute="leading" secondItem="tHH-Qy-UFl" secondAttribute="leading" constant="30" id="2t1-r0-diA"/>
+                            <constraint firstItem="gf4-Np-OXh" firstAttribute="top" secondItem="cnY-ti-hbr" secondAttribute="bottom" constant="100" id="67F-La-MDO"/>
+                            <constraint firstItem="TOt-Zb-Wac" firstAttribute="top" secondItem="gf4-Np-OXh" secondAttribute="bottom" constant="45" id="KW9-MK-EvC"/>
+                            <constraint firstItem="tHH-Qy-UFl" firstAttribute="trailing" secondItem="gf4-Np-OXh" secondAttribute="trailing" constant="30" id="h8V-do-dXC"/>
+                            <constraint firstItem="gf4-Np-OXh" firstAttribute="leading" secondItem="tHH-Qy-UFl" secondAttribute="leading" constant="30" id="pyg-aC-jFm"/>
                             <constraint firstAttribute="trailing" secondItem="cnY-ti-hbr" secondAttribute="trailing" id="qyZ-ea-TPW"/>
                             <constraint firstItem="cnY-ti-hbr" firstAttribute="leading" secondItem="18n-br-kik" secondAttribute="leading" id="r1f-8p-gRo"/>
+                            <constraint firstItem="tHH-Qy-UFl" firstAttribute="trailing" secondItem="TOt-Zb-Wac" secondAttribute="trailing" constant="30" id="sk4-8c-9GR"/>
                             <constraint firstItem="cnY-ti-hbr" firstAttribute="top" secondItem="18n-br-kik" secondAttribute="top" id="yPV-v1-wEi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="gf4-Np-OXh" id="qpD-Om-Ef3"/>
+                        <outlet property="resetButton" destination="TOt-Zb-Wac" id="ouk-b5-vCH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTB-wQ-EGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
