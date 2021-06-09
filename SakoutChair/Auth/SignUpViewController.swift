@@ -54,7 +54,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             errorLabel.text = "Fields are empties"
             return
         }
-        authManager.createUser(email: email, password: password) { [weak self] (success) in
+        authManager.createUser(name: name, email: email, password: password) { [weak self] (success) in
             guard let strongSelf = self else { return }
             if success && strongSelf.isIdenticalPassword {
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)

@@ -7,6 +7,7 @@ target 'SakoutChair' do
 
   # Pods for SakoutChair
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'lottie-ios'
 
   target 'SakoutChairTests' do

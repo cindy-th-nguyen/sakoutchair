@@ -6,9 +6,19 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 struct User {
-    var id: String
+    var id: String?
+    var name: String
     var email: String
-    var hasConfigure: Bool = false
+    var password: String
+    var hasConfigure: Bool {
+        let metadata = Auth.auth().currentUser?.metadata
+        if (metadata?.creationDate == metadata?.lastSignInDate) {
+            return false
+        } else {
+            return true
+        }
+    }
 }
