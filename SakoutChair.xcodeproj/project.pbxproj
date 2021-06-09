@@ -13,6 +13,7 @@
 		7B1D0D3A263ACBC4006C9E2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D0D39263ACBC4006C9E2A /* GoogleService-Info.plist */; };
 		7B1D0D47263ACF2B006C9E2A /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */; };
 		7B1D0DF9263B4E7E006C9E2A /* work.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D0DF8263B4E7D006C9E2A /* work.json */; };
+		7B41FA512645AAFA0052CF37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41FA502645AAFA0052CF37 /* User.swift */; };
 		7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCB54F263AC786007A395C /* AuthViewController.swift */; };
 		7BDF3021263DFB6100CE5F0B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3020263DFB6100CE5F0B /* CustomColors.swift */; };
 		7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF302B263E135600CE5F0B /* SignUpViewController.swift */; };
@@ -53,6 +54,7 @@
 		7B1D0D39263ACBC4006C9E2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		7B1D0DF8263B4E7D006C9E2A /* work.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = work.json; sourceTree = "<group>"; };
+		7B41FA502645AAFA0052CF37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7BCCB54F263AC786007A395C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		7BDF3020263DFB6100CE5F0B /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		7BDF302B263E135600CE5F0B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		7B41FA4F2645AAB50052CF37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B41FA502645AAFA0052CF37 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7BCCB54E263AC6F3007A395C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 		7BF5F38226356244009FC0DC /* SakoutChair */ = {
 			isa = PBXGroup;
 			children = (
+				7B41FA4F2645AAB50052CF37 /* Model */,
 				7BDF301F263DF97A00CE5F0B /* Extension */,
 				7B19C193263D749B00056E94 /* Home */,
 				7BCCB54E263AC6F3007A395C /* Auth */,
@@ -464,6 +475,7 @@
 				7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */,
 				7BF5F38626356244009FC0DC /* SceneDelegate.swift in Sources */,
 				7B1D0D47263ACF2B006C9E2A /* FirebaseAuthManager.swift in Sources */,
+				7B41FA512645AAFA0052CF37 /* User.swift in Sources */,
 				7B19C198263D76FA00056E94 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            print("successfully log out")
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let authViewController = storyBoard.instantiateViewController(withIdentifier: "auth") as! AuthViewController
             self.navigationController!.pushViewController(authViewController, animated: true)
