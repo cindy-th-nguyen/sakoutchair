@@ -7,14 +7,22 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
+    let authManager = FirebaseAuthManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpComponents()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if(!(authManager.getCurrentUser()?.hasConfigure ?? true)) {
+            PopUpActionViewController.showPopup(parentVC: self)
+        }
+    }
     func setUpComponents() {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.isNavigationBarHidden = true

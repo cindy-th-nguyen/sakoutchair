@@ -12,13 +12,6 @@ struct User {
     var id: String?
     var name: String
     var email: String
-    var password: String
-    var hasConfigure: Bool {
-        let metadata = Auth.auth().currentUser?.metadata
-        if (metadata?.creationDate == metadata?.lastSignInDate) {
-            return false
-        } else {
-            return true
-        }
-    }
+//    var password: String
+    var hasConfigure: Bool = false
 }

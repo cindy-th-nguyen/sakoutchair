@@ -31,4 +31,22 @@ public class FirebaseAuthManager {
             }
         }
     }
+    
+    func getCurrentUser() -> User? {
+        let ref = Database.database(url: "https://sakoutchair-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+        var currentUser: User?
+        let userID = Auth.auth().currentUser?.uid
+        ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let userEmail = value?["email"] as? String ?? ""
+            let userName = value?["name"] as? String ?? ""
+            let hasConfigure = value?["hasConfigure"] as? Bool ?? false
+            currentUser = User(id: userID, name: userName, email: userEmail, hasConfigure: hasConfigure)
+            print("🐭 \(currentUser)")
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        return currentUser
+    }
 }
