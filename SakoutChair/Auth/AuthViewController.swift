@@ -32,18 +32,12 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         
         emailTextfield.placeholder = "Email"
         passwordTextField.placeholder = "Password"
-        
-        logInButton.layer.cornerRadius = 20
-        signUpButton.layer.cornerRadius = 20
-        signUpButton.layer.borderWidth = 5
-        
+    
         titleLabel.textColor = UIColor.CustomColor.customDarkBlue
         headView.backgroundColor = UIColor.CustomColor.customBeige
-        signUpButton.layer.borderColor = UIColor.CustomColor.customBeige.cgColor
-        signUpButton.setTitleColor(UIColor.CustomColor.customDarkBlue, for: .normal)
-        signUpButton.backgroundColor = .white
-        logInButton.backgroundColor = UIColor.CustomColor.customDarkBlue
-        logInButton.setTitleColor(UIColor.CustomColor.customBeige, for: .normal)
+        
+        signUpButton.customBeigeRoundedBoutton()
+        logInButton.customBlueRoundedButton()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     

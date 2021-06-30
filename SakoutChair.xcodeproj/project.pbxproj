@@ -19,8 +19,9 @@
 		7B8E545B268BB08500674DC4 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E545A268BB08500674DC4 /* CarouselCell.swift */; };
 		7B8E5460268BB0CD00674DC4 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E545F268BB0CD00674DC4 /* CarouselView.swift */; };
 		7B8E5465268BB13500674DC4 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E5464268BB13500674DC4 /* CarouselViewController.swift */; };
+		7B8E5578268CB00B00674DC4 /* Custom+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E5577268CB00B00674DC4 /* Custom+UIButton.swift */; };
 		7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCB54F263AC786007A395C /* AuthViewController.swift */; };
-		7BDF3021263DFB6100CE5F0B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3020263DFB6100CE5F0B /* CustomColors.swift */; };
+		7BDF3021263DFB6100CE5F0B /* Custom+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3020263DFB6100CE5F0B /* Custom+Colors.swift */; };
 		7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF302B263E135600CE5F0B /* SignUpViewController.swift */; };
 		7BDF305A263EF60500CE5F0B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3059263EF60500CE5F0B /* ResetPasswordViewController.swift */; };
 		7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38326356244009FC0DC /* AppDelegate.swift */; };
@@ -65,8 +66,9 @@
 		7B8E545A268BB08500674DC4 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		7B8E545F268BB0CD00674DC4 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		7B8E5464268BB13500674DC4 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		7B8E5577268CB00B00674DC4 /* Custom+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom+UIButton.swift"; sourceTree = "<group>"; };
 		7BCCB54F263AC786007A395C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		7BDF3020263DFB6100CE5F0B /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		7BDF3020263DFB6100CE5F0B /* Custom+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom+Colors.swift"; sourceTree = "<group>"; };
 		7BDF302B263E135600CE5F0B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7BDF3059263EF60500CE5F0B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		7BF5F38026356244009FC0DC /* SakoutChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SakoutChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +171,8 @@
 		7BDF301F263DF97A00CE5F0B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7BDF3020263DFB6100CE5F0B /* CustomColors.swift */,
+				7BDF3020263DFB6100CE5F0B /* Custom+Colors.swift */,
+				7B8E5577268CB00B00674DC4 /* Custom+UIButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -499,12 +502,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8E5578268CB00B00674DC4 /* Custom+UIButton.swift in Sources */,
 				7BDF305A263EF60500CE5F0B /* ResetPasswordViewController.swift in Sources */,
 				7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */,
 				7BF5F38826356244009FC0DC /* ViewController.swift in Sources */,
 				7B8E545B268BB08500674DC4 /* CarouselCell.swift in Sources */,
 				7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */,
-				7BDF3021263DFB6100CE5F0B /* CustomColors.swift in Sources */,
+				7BDF3021263DFB6100CE5F0B /* Custom+Colors.swift in Sources */,
 				7B8E5460268BB0CD00674DC4 /* CarouselView.swift in Sources */,
 				7B8E533F268A5B1200674DC4 /* PopUpActionViewController.swift in Sources */,
 				7B8E5465268BB13500674DC4 /* CarouselViewController.swift in Sources */,

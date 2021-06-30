@@ -174,7 +174,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGj-X1-Iw4">
-                                <rect key="frame" x="30" y="285" width="354" height="35"/>
+                                <rect key="frame" x="30" y="252" width="354" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="jR0-Ck-H5M"/>
                                 </constraints>
@@ -182,7 +182,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rdn-Zi-roN">
-                                <rect key="frame" x="30" y="345" width="354" height="35"/>
+                                <rect key="frame" x="30" y="312" width="354" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2mx-u7-R5H"/>
                                 </constraints>
@@ -190,7 +190,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjF-yv-oYh">
-                                <rect key="frame" x="30" y="405" width="354" height="35"/>
+                                <rect key="frame" x="30" y="372" width="354" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ypF-Bj-398"/>
                                 </constraints>
@@ -198,7 +198,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hIF-CP-GuV">
-                                <rect key="frame" x="30" y="465" width="354" height="35"/>
+                                <rect key="frame" x="30" y="432" width="354" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="cqn-j1-czI"/>
                                 </constraints>
@@ -206,7 +206,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npK-al-4wA">
-                                <rect key="frame" x="30" y="570" width="354" height="45"/>
+                                <rect key="frame" x="30" y="537" width="354" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.74603806530000005" blue="0.74773791450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="CXw-hk-r26"/>
@@ -218,13 +218,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BQ-jv-ayT">
-                                <rect key="frame" x="30" y="523" width="354" height="21"/>
+                                <rect key="frame" x="30" y="490" width="354" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="mmu-9C-zLm">
-                                <rect key="frame" x="30" y="640" width="354" height="30"/>
+                                <rect key="frame" x="30" y="607" width="354" height="30"/>
                                 <state key="normal" title="Already have an account? Click here"/>
                                 <connections>
                                     <action selector="signInButtonDidTap:" destination="Rvg-GT-WxJ" eventType="touchUpInside" id="6t9-ih-Xme"/>
@@ -254,7 +254,7 @@
                             <constraint firstItem="npK-al-4wA" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="m3B-gT-J6O"/>
                             <constraint firstItem="mmu-9C-zLm" firstAttribute="top" secondItem="npK-al-4wA" secondAttribute="bottom" constant="25" id="mKG-ZM-Xg8"/>
                             <constraint firstItem="hIF-CP-GuV" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="mn1-qy-Z67"/>
-                            <constraint firstItem="DGj-X1-Iw4" firstAttribute="top" secondItem="udt-4k-Kq2" secondAttribute="bottom" constant="83" id="tQc-VE-H7n"/>
+                            <constraint firstItem="DGj-X1-Iw4" firstAttribute="top" secondItem="udt-4k-Kq2" secondAttribute="bottom" constant="50" id="tQc-VE-H7n"/>
                             <constraint firstItem="udt-4k-Kq2" firstAttribute="trailing" secondItem="YYa-VU-oB1" secondAttribute="trailing" id="v1d-bv-JCc"/>
                             <constraint firstItem="YYa-VU-oB1" firstAttribute="trailing" secondItem="Rdn-Zi-roN" secondAttribute="trailing" constant="30" id="vah-Vd-nBD"/>
                             <constraint firstItem="tjF-yv-oYh" firstAttribute="leading" secondItem="YYa-VU-oB1" secondAttribute="leading" constant="30" id="x1H-nz-cPZ"/>
@@ -267,6 +267,7 @@
                         <outlet property="createAccountButton" destination="npK-al-4wA" id="j0R-QN-w6n"/>
                         <outlet property="emailTextField" destination="Rdn-Zi-roN" id="sAD-xo-e25"/>
                         <outlet property="errorLabel" destination="6BQ-jv-ayT" id="Jkv-zC-wne"/>
+                        <outlet property="headView" destination="udt-4k-Kq2" id="h3w-e2-IdT"/>
                         <outlet property="nameTextField" destination="DGj-X1-Iw4" id="Z7J-pr-EWm"/>
                         <outlet property="passwordTextField" destination="tjF-yv-oYh" id="QYb-TF-rEy"/>
                         <outlet property="subtitleLabel" destination="v15-1Z-p6b" id="37b-Ea-KQr"/>

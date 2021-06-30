@@ -15,6 +15,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var headView: UIView!
     @IBOutlet weak var errorLabel: UILabel!
     
     let authManager = FirebaseAuthManager()
@@ -38,6 +39,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         confirmPasswordTextField.isSecureTextEntry = true
         errorLabel.isHidden = true
         errorLabel.textColor = .red
+        createAccountButton.customBlueRoundedButton()
+        headView.backgroundColor = UIColor.CustomColor.customBeige
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -70,7 +73,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signInButtonDidTap(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let authViewController = storyBoard.instantiateViewController(withIdentifier: "auth") as! AuthViewController
-        self.navigationController!.pushViewController(authViewController, animated: true)
+        self.navigationController!.pushViewController(authViewController, animated: false)
     }
     
     
