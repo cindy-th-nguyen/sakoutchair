@@ -373,26 +373,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGC-8R-CRR">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGC-8R-CRR" customClass="ZKCarousel" customModule="ZKCarousel">
+                                <rect key="frame" x="0.0" y="-30" width="414" height="400"/>
+                                <viewLayoutGuide key="safeArea" id="Nbx-Ns-Yh3"/>
                                 <color key="backgroundColor" red="0.77454036500000001" green="0.9022723117" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yGC-8R-CRR" secondAttribute="height" multiplier="414:439" constant="36.779043280182236" id="HXQ-rY-BZE"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsw-lL-fc6">
-                                <rect key="frame" x="15" y="430" width="89" height="21"/>
+                                <rect key="frame" x="15" y="405" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdy-52-XaD">
-                                <rect key="frame" x="333" y="424" width="66" height="33"/>
+                                <rect key="frame" x="333" y="399" width="66" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Show All"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ca2-Ys-1wC">
-                                <rect key="frame" x="15" y="474" width="384" height="230"/>
+                                <rect key="frame" x="15" y="449" width="384" height="230"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ca2-Ys-1wC" secondAttribute="height" multiplier="192:115" id="1pL-I1-pdd"/>
@@ -455,6 +456,7 @@
                         <viewLayoutGuide key="safeArea" id="hOP-TR-jRc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yGC-8R-CRR" firstAttribute="top" secondItem="EsG-Hs-THX" secondAttribute="top" constant="-30" id="2e6-cq-r1j"/>
                             <constraint firstItem="yGC-8R-CRR" firstAttribute="leading" secondItem="hOP-TR-jRc" secondAttribute="leading" id="40O-94-36t"/>
                             <constraint firstItem="Ca2-Ys-1wC" firstAttribute="leading" secondItem="hOP-TR-jRc" secondAttribute="leading" constant="15" id="4Cj-tu-p2E"/>
                             <constraint firstItem="Ca2-Ys-1wC" firstAttribute="top" secondItem="rsw-lL-fc6" secondAttribute="bottom" constant="23" id="91J-LV-w7Q"/>
@@ -465,9 +467,8 @@
                             <constraint firstItem="Bdy-52-XaD" firstAttribute="centerY" secondItem="rsw-lL-fc6" secondAttribute="centerY" id="egO-eL-Cuo"/>
                             <constraint firstItem="5Qz-Gf-NKT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hOP-TR-jRc" secondAttribute="leading" symbolic="YES" id="izG-Y8-nvX"/>
                             <constraint firstItem="rsw-lL-fc6" firstAttribute="leading" secondItem="hOP-TR-jRc" secondAttribute="leading" constant="15" id="pvs-63-8jd"/>
-                            <constraint firstItem="rsw-lL-fc6" firstAttribute="top" secondItem="yGC-8R-CRR" secondAttribute="bottom" constant="30" id="spd-67-uH1"/>
+                            <constraint firstItem="rsw-lL-fc6" firstAttribute="top" secondItem="yGC-8R-CRR" secondAttribute="bottom" constant="35" id="spd-67-uH1"/>
                             <constraint firstItem="hOP-TR-jRc" firstAttribute="trailing" secondItem="Bdy-52-XaD" secondAttribute="trailing" constant="15" id="tqj-EY-hA6"/>
-                            <constraint firstItem="yGC-8R-CRR" firstAttribute="top" secondItem="EsG-Hs-THX" secondAttribute="top" id="uEV-O5-VBI"/>
                             <constraint firstItem="hOP-TR-jRc" firstAttribute="bottom" secondItem="5Qz-Gf-NKT" secondAttribute="bottom" id="y2u-Bh-Poy"/>
                         </constraints>
                     </view>
@@ -475,6 +476,7 @@
                     <connections>
                         <outlet property="historyCollectionView" destination="Ca2-Ys-1wC" id="PSX-VU-N16"/>
                         <outlet property="mainCardView" destination="yGC-8R-CRR" id="aXX-lv-EjI"/>
+                        <outlet property="mainCarousel" destination="yGC-8R-CRR" id="n4d-oe-kRc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7SC-EQ-uP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

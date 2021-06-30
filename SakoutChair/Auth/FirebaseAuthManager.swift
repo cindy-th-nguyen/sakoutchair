@@ -43,7 +43,6 @@ public class FirebaseAuthManager {
             let userName = value?["name"] as? String ?? ""
             let hasConfigure = value?["hasConfigure"] as? Bool ?? false
             currentUser = User(id: userID, name: userName, email: userEmail, hasConfigure: hasConfigure)
-            print("🐭 \(currentUser)")
             completion(currentUser)
         }) { (error) in
             print(error.localizedDescription)

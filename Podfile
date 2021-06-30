@@ -9,6 +9,7 @@ target 'SakoutChair' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'lottie-ios'
+  pod 'ZKCarousel'
 
   target 'SakoutChairTests' do
     inherit! :search_paths
