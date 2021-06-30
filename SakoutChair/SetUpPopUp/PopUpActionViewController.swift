@@ -13,6 +13,7 @@ protocol PopUpDelegate {
 class PopUpActionViewController: UIViewController {
     static let identifier = "PopUpActionViewController"
     var delegate: PopUpDelegate?
+
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var startSetUpButton: UIButton!
     @IBOutlet weak var laterButton: UIButton!
@@ -20,8 +21,13 @@ class PopUpActionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.gray.withAlphaComponent(0.40)
+        self.setUpComponents()
+    }
+    
+    func setUpComponents() {
         popUpView.layer.cornerRadius = 25
+        popUpView.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.gray.withAlphaComponent(0.50)
     }
     
     @IBAction func startSetUpAction(_ sender: Any) {
@@ -29,9 +35,11 @@ class PopUpActionViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func laterAction(_ sender: Any) {
+    
+    @IBAction func cancelSetUpAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     
     static func showPopup(parentVC: UIViewController){
         if let popupViewController = UIStoryboard(name: "PopUp", bundle: nil).instantiateViewController(withIdentifier: "PopUpActionViewController") as? PopUpActionViewController {

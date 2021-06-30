@@ -17,71 +17,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSx-LU-wDU">
-                                <rect key="frame" x="57" y="144" width="300" height="608"/>
+                                <rect key="frame" x="47" y="323" width="320" height="250"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-f9-3rb">
+                                        <rect key="frame" x="50" y="195" width="69" height="30"/>
+                                        <color key="backgroundColor" red="0.77454036500000001" green="0.9022723117" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Start Now"/>
+                                        <connections>
+                                            <action selector="startSetUpAction:" destination="fjv-RK-toN" eventType="touchUpInside" id="593-Jz-ARx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFB-LC-dQp">
+                                        <rect key="frame" x="234" y="195" width="36" height="30"/>
+                                        <state key="normal" title="Later"/>
+                                        <connections>
+                                            <action selector="cancelSetUpAction:" destination="fjv-RK-toN" eventType="touchUpInside" id="9Ic-ep-1RJ"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO SAKOUTCHAIR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmX-qF-5Ip">
-                                        <rect key="frame" x="10" y="30" width="280" height="21"/>
+                                        <rect key="frame" x="39.5" y="35" width="241" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-n7-9xe">
-                                        <rect key="frame" x="20" y="71" width="270" height="232"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start your first configuration! You need to do it to have a full access to our app 😊" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-n7-9xe">
+                                        <rect key="frame" x="27" y="85" width="267" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="232" id="PEf-Ve-odv"/>
+                                            <constraint firstAttribute="width" constant="267" id="TTR-GY-2tM"/>
+                                            <constraint firstAttribute="height" constant="80" id="ac4-EG-PM2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-f9-3rb">
-                                        <rect key="frame" x="50" y="528" width="75" height="30"/>
-                                        <color key="backgroundColor" red="0.77454036500000001" green="0.9022723117" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="G5f-Gj-QHt"/>
-                                        </constraints>
-                                        <state key="normal" title="Start Now"/>
-                                        <connections>
-                                            <action selector="startSetUpAction:" destination="fjv-RK-toN" eventType="touchUpInside" id="gih-4e-Hck"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFB-LC-dQp">
-                                        <rect key="frame" x="214" y="528" width="36" height="30"/>
-                                        <state key="normal" title="Later"/>
-                                        <connections>
-                                            <action selector="laterAction:" destination="fjv-RK-toN" eventType="touchUpInside" id="qpb-Bd-wbP"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="wYJ-n7-9xe" secondAttribute="trailing" constant="10" id="2Iu-4S-pGH"/>
-                                    <constraint firstItem="GFB-LC-dQp" firstAttribute="centerY" secondItem="Krs-f9-3rb" secondAttribute="centerY" id="AWK-tl-4TW"/>
-                                    <constraint firstItem="Krs-f9-3rb" firstAttribute="leading" secondItem="nSx-LU-wDU" secondAttribute="leading" constant="50" id="NQ5-03-Cu1"/>
-                                    <constraint firstAttribute="width" constant="300" id="PYQ-AH-kSo"/>
-                                    <constraint firstItem="lmX-qF-5Ip" firstAttribute="leading" secondItem="nSx-LU-wDU" secondAttribute="leading" constant="10" id="TDn-ph-tYZ"/>
-                                    <constraint firstItem="wYJ-n7-9xe" firstAttribute="leading" secondItem="nSx-LU-wDU" secondAttribute="leading" constant="20" id="XeL-b4-HPR"/>
-                                    <constraint firstAttribute="trailing" secondItem="lmX-qF-5Ip" secondAttribute="trailing" constant="10" id="bwT-9S-qUR"/>
-                                    <constraint firstAttribute="bottom" secondItem="Krs-f9-3rb" secondAttribute="bottom" constant="50" id="dKE-Aw-xEb"/>
-                                    <constraint firstItem="lmX-qF-5Ip" firstAttribute="top" secondItem="nSx-LU-wDU" secondAttribute="top" constant="30" id="lNj-22-QH9"/>
-                                    <constraint firstAttribute="trailing" secondItem="GFB-LC-dQp" secondAttribute="trailing" constant="50" id="leu-mo-gJj"/>
-                                    <constraint firstItem="wYJ-n7-9xe" firstAttribute="top" secondItem="lmX-qF-5Ip" secondAttribute="bottom" constant="20" id="uUD-x4-3T2"/>
+                                    <constraint firstAttribute="width" constant="320" id="AEl-QI-yyz"/>
+                                    <constraint firstItem="Krs-f9-3rb" firstAttribute="leading" secondItem="nSx-LU-wDU" secondAttribute="leading" constant="50" id="Dhb-4x-dna"/>
+                                    <constraint firstAttribute="bottom" secondItem="Krs-f9-3rb" secondAttribute="bottom" constant="25" id="ES6-tn-YXc"/>
+                                    <constraint firstItem="GFB-LC-dQp" firstAttribute="centerY" secondItem="Krs-f9-3rb" secondAttribute="centerY" id="aZj-fT-ymD"/>
+                                    <constraint firstItem="lmX-qF-5Ip" firstAttribute="centerX" secondItem="nSx-LU-wDU" secondAttribute="centerX" id="elc-aL-RLH"/>
+                                    <constraint firstItem="wYJ-n7-9xe" firstAttribute="centerY" secondItem="nSx-LU-wDU" secondAttribute="centerY" id="iqm-pc-x3S"/>
+                                    <constraint firstItem="lmX-qF-5Ip" firstAttribute="top" secondItem="nSx-LU-wDU" secondAttribute="top" constant="35" id="kEi-Qf-qVr"/>
+                                    <constraint firstAttribute="trailing" secondItem="GFB-LC-dQp" secondAttribute="trailing" constant="50" id="mpd-uY-bjj"/>
+                                    <constraint firstAttribute="height" constant="250" id="oTM-xr-tiI"/>
+                                    <constraint firstItem="wYJ-n7-9xe" firstAttribute="leading" secondItem="lmX-qF-5Ip" secondAttribute="trailing" constant="-253.5" id="qfS-tE-vRt"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hWq-v0-CDg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nSx-LU-wDU" firstAttribute="centerY" secondItem="NnU-lY-3Yv" secondAttribute="centerY" id="g7d-Ds-iSs"/>
-                            <constraint firstItem="nSx-LU-wDU" firstAttribute="centerX" secondItem="NnU-lY-3Yv" secondAttribute="centerX" id="wDW-io-Veu"/>
-                            <constraint firstItem="nSx-LU-wDU" firstAttribute="top" secondItem="hWq-v0-CDg" secondAttribute="top" constant="100" id="zSg-hs-mNo"/>
+                            <constraint firstItem="nSx-LU-wDU" firstAttribute="centerX" secondItem="NnU-lY-3Yv" secondAttribute="centerX" id="Rzg-ZH-dW6"/>
+                            <constraint firstItem="nSx-LU-wDU" firstAttribute="centerY" secondItem="NnU-lY-3Yv" secondAttribute="centerY" id="dIT-Ad-TLe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="wYJ-n7-9xe" id="hEf-At-5Ez"/>
-                        <outlet property="laterButton" destination="GFB-LC-dQp" id="JgV-M2-4F3"/>
-                        <outlet property="popUpView" destination="nSx-LU-wDU" id="CUd-cI-Inx"/>
-                        <outlet property="startSetUpButton" destination="Krs-f9-3rb" id="mMR-Ja-nG0"/>
+                        <outlet property="popUpView" destination="nSx-LU-wDU" id="6Iv-Z1-fQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMo-VX-Kv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

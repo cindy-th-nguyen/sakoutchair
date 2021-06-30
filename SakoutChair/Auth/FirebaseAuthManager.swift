@@ -32,7 +32,7 @@ public class FirebaseAuthManager {
         }
     }
     
-    func getCurrentUser() -> User? {
+    func getCurrentUser(completion: @escaping ((User?)->Void)) {
         let ref = Database.database(url: "https://sakoutchair-default-rtdb.europe-west1.firebasedatabase.app/").reference()
         var currentUser: User?
         let userID = Auth.auth().currentUser?.uid
@@ -44,9 +44,9 @@ public class FirebaseAuthManager {
             let hasConfigure = value?["hasConfigure"] as? Bool ?? false
             currentUser = User(id: userID, name: userName, email: userEmail, hasConfigure: hasConfigure)
             print("🐭 \(currentUser)")
+            completion(currentUser)
         }) { (error) in
             print(error.localizedDescription)
         }
-        return currentUser
     }
 }
