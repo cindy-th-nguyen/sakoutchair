@@ -50,11 +50,13 @@ PODS:
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
+  - ZKCarousel (1.1.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - lottie-ios
+  - ZKCarousel
 
 SPEC REPOS:
   trunk:
@@ -70,6 +72,7 @@ SPEC REPOS:
     - lottie-ios
     - nanopb
     - PromisesObjC
+    - ZKCarousel
 
 SPEC CHECKSUMS:
   Firebase: 09fb40287b6dfc8ee65f726fa0b788719d3f2a07
@@ -84,7 +87,8 @@ SPEC CHECKSUMS:
   lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  ZKCarousel: 935e0aa9beed83824588d9a82d8bafa5b6fc19db
 
-PODFILE CHECKSUM: a0619901d8a76d48e73196bbc7051ea52989de40
+PODFILE CHECKSUM: 388b67d4b8881172d7dbae467c94c37c58533cbd
 
 COCOAPODS: 1.10.1
