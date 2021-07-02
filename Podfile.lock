@@ -1,4 +1,7 @@
 PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - Firebase/Auth (8.2.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 8.2.0)
@@ -46,22 +49,28 @@ PODS:
   - GTMSessionFetcher/Core (1.6.1)
   - leveldb-library (1.22.1)
   - lottie-ios (3.2.3)
+  - Moscapsule (0.6.4)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - OpenSSL-Universal (1.0.1.20)
   - PromisesObjC (1.2.12)
   - ZKCarousel (1.1.0)
 
 DEPENDENCIES:
+  - Charts (~> 3.6)
   - Firebase/Auth
   - Firebase/Database
   - lottie-ios
+  - Moscapsule (from `https://github.com/flightonary/Moscapsule.git`)
+  - OpenSSL-Universal (~> 1.0.1.20)
   - ZKCarousel
 
 SPEC REPOS:
   trunk:
+    - Charts
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -73,10 +82,21 @@ SPEC REPOS:
     - leveldb-library
     - lottie-ios
     - nanopb
+    - OpenSSL-Universal
     - PromisesObjC
     - ZKCarousel
 
+EXTERNAL SOURCES:
+  Moscapsule:
+    :git: https://github.com/flightonary/Moscapsule.git
+
+CHECKOUT OPTIONS:
+  Moscapsule:
+    :commit: 76f5d85f81c2841f8a110a7a3e7e5089beb47aed
+    :git: https://github.com/flightonary/Moscapsule.git
+
 SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   Firebase: 12c568897b807321964e89d2b263ef4c6cff3db6
   FirebaseAuth: 4c4fb0ba1a169f3acb4aa5b724f7ae7c0999ee44
   FirebaseCore: 3a83f24c3de69ec9f9a426e2598125ea51f3a2ce
@@ -87,10 +107,12 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  Moscapsule: 6bb834c60e24251897dc1cb2c4552fd674f887f3
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  OpenSSL-Universal: 71f2c4b2ae758e2218090f905e95ca0ac5c01be7
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   ZKCarousel: 935e0aa9beed83824588d9a82d8bafa5b6fc19db
 
-PODFILE CHECKSUM: 388b67d4b8881172d7dbae467c94c37c58533cbd
+PODFILE CHECKSUM: aa425f46a1849c05e072c4a6f0872892eee81329
 
 COCOAPODS: 1.10.1

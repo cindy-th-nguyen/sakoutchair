@@ -20,8 +20,8 @@
                                 <rect key="frame" x="47" y="323" width="320" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-f9-3rb">
-                                        <rect key="frame" x="50" y="195" width="69" height="30"/>
-                                        <color key="backgroundColor" red="0.77454036500000001" green="0.9022723117" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="50" y="195" width="74" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Start Now"/>
                                         <connections>
                                             <action selector="startSetUpAction:" destination="fjv-RK-toN" eventType="touchUpInside" id="593-Jz-ARx"/>
