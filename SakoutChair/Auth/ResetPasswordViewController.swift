@@ -11,6 +11,7 @@ import Firebase
 class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var headerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,8 @@ class ResetPasswordViewController: UIViewController {
     
     func setUpComponents() {
         emailTextField.keyboardType = .emailAddress
-        resetButton.layer.cornerRadius = 20
+        resetButton.customBlueRoundedButton()
+        headerView.backgroundColor = UIColor.CustomColor.customBeige
     }
     
     @IBAction func resetButtonDidTap(_ sender: Any) {

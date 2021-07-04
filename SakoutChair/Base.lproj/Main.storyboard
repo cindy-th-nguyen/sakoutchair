@@ -287,8 +287,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnY-ti-hbr">
+                            <view contentMode="scaleToFill" id="cnY-ti-hbr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SakoutChair." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8Q-BN-Yjk">
                                         <rect key="frame" x="15" y="96" width="389" height="52"/>
@@ -303,9 +304,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="Fe6-jv-GBx"/>
                                 <color key="backgroundColor" red="0.77454036500000001" green="0.9022723117" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="hJj-gy-NGK" firstAttribute="top" secondItem="F8Q-BN-Yjk" secondAttribute="bottom" constant="8" symbolic="YES" id="1SY-XX-42r"/>
+                                    <constraint firstAttribute="width" secondItem="cnY-ti-hbr" secondAttribute="height" multiplier="69:40" id="5mQ-e8-jMb"/>
                                     <constraint firstAttribute="trailing" secondItem="F8Q-BN-Yjk" secondAttribute="trailing" constant="10" id="FbA-Fp-fu1"/>
                                     <constraint firstAttribute="bottom" secondItem="hJj-gy-NGK" secondAttribute="bottom" constant="45" id="HRV-Uo-CEn"/>
                                     <constraint firstItem="F8Q-BN-Yjk" firstAttribute="leading" secondItem="cnY-ti-hbr" secondAttribute="leading" constant="15" id="R6f-p3-dsg"/>
@@ -319,8 +322,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-Zb-Wac">
-                                <rect key="frame" x="30" y="419" width="354" height="30"/>
+                                <rect key="frame" x="30" y="419" width="354" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.74603806530000005" blue="0.74773791450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="X6X-It-ySa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="RESET"/>
                                 <connections>
                                     <action selector="resetButtonDidTap:" destination="6Tf-Ic-GuL" eventType="touchUpInside" id="xYC-Aw-UDw"/>
@@ -334,6 +341,7 @@
                             <constraint firstItem="TOt-Zb-Wac" firstAttribute="leading" secondItem="tHH-Qy-UFl" secondAttribute="leading" constant="30" id="2t1-r0-diA"/>
                             <constraint firstItem="gf4-Np-OXh" firstAttribute="top" secondItem="cnY-ti-hbr" secondAttribute="bottom" constant="100" id="67F-La-MDO"/>
                             <constraint firstItem="TOt-Zb-Wac" firstAttribute="top" secondItem="gf4-Np-OXh" secondAttribute="bottom" constant="45" id="KW9-MK-EvC"/>
+                            <constraint firstItem="cnY-ti-hbr" firstAttribute="top" secondItem="tHH-Qy-UFl" secondAttribute="top" id="Xec-OK-sIa"/>
                             <constraint firstItem="tHH-Qy-UFl" firstAttribute="trailing" secondItem="gf4-Np-OXh" secondAttribute="trailing" constant="30" id="h8V-do-dXC"/>
                             <constraint firstItem="gf4-Np-OXh" firstAttribute="leading" secondItem="tHH-Qy-UFl" secondAttribute="leading" constant="30" id="pyg-aC-jFm"/>
                             <constraint firstAttribute="trailing" secondItem="cnY-ti-hbr" secondAttribute="trailing" id="qyZ-ea-TPW"/>
@@ -344,6 +352,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="gf4-Np-OXh" id="qpD-Om-Ef3"/>
+                        <outlet property="headerView" destination="cnY-ti-hbr" id="Q3u-Fm-hbX"/>
                         <outlet property="resetButton" destination="TOt-Zb-Wac" id="ouk-b5-vCH"/>
                     </connections>
                 </viewController>
