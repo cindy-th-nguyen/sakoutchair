@@ -28,6 +28,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
         
+        MqttRequester.prepareRequester()
+        guard let mqttClient = MqttRequester.mqttClient else {
+            return
+        }
+        mqttClient.subscribe("sakoutcher/test/payload", qos: 0)
+//        mqttClient.subscribe("sakoutcher/test/sonar1", qos: 0)
+//        mqttClient.subscribe("sakoutcher/test/sonar2", qos: 0)
+//        mqttClient.subscribe("sakoutcher/test/sonar3", qos: 0)
+        
         self.navigationController?.isNavigationBarHidden = false
         self.historyCollectionView.delegate = self
         self.historyCollectionView.dataSource = self
