@@ -35,6 +35,8 @@ public class MqttRequester {
                 let payloadJson = try? JSONDecoder().decode(MqttPayload.self, from: msg.data(using: .utf8)!)
                //enregistrer le payload ds une classe, un tableau en singleton ?? je sais pas mais du coup après enregistrement les données seront dispo pr dessiner le charts
                 //faire direct un enregistrement ds bdd firebase à partir d'ici ?
+                
+                
             }
         }
         

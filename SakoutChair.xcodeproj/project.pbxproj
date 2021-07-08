@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0593E60F79BFFC3177CDB92E /* Pods_SakoutChair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11468AF5C72A798067F340FB /* Pods_SakoutChair.framework */; };
-		1C2831AE26933D22009A85EF /* MqttPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2831AD26933D22009A85EF /* MqttPayload.swift */; };
-		1C2831B126933DC0009A85EF /* MqttRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2831B026933DC0009A85EF /* MqttRequester.swift */; };
 		2501521760C6B80828AE9A80 /* Pods_SakoutChairTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0960122EAC9A7A23E8F2DF84 /* Pods_SakoutChairTests.framework */; };
 		7B19C198263D76FA00056E94 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B19C197263D76FA00056E94 /* HomeViewController.swift */; };
 		7B1D0D3A263ACBC4006C9E2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D0D39263ACBC4006C9E2A /* GoogleService-Info.plist */; };
 		7B1D0D47263ACF2B006C9E2A /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */; };
 		7B1D0DF9263B4E7E006C9E2A /* work.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D0DF8263B4E7D006C9E2A /* work.json */; };
 		7B41FA512645AAFA0052CF37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41FA502645AAFA0052CF37 /* User.swift */; };
+		7B89CA6A26934B1700AA62CC /* MqttRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B89CA6926934B1700AA62CC /* MqttRequester.swift */; };
+		7B89CA7426934B9A00AA62CC /* MqttPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B89CA7226934B9A00AA62CC /* MqttPayload.swift */; };
+		7B89CA7526934B9A00AA62CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B89CA7326934B9A00AA62CC /* User.swift */; };
 		7B8E533A268A576300674DC4 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E5339268A576300674DC4 /* PopUp.storyboard */; };
 		7B8E533F268A5B1200674DC4 /* PopUpActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E533E268A5B1200674DC4 /* PopUpActionViewController.swift */; };
 		7B8E545B268BB08500674DC4 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E545A268BB08500674DC4 /* CarouselCell.swift */; };
@@ -60,14 +61,15 @@
 /* Begin PBXFileReference section */
 		0960122EAC9A7A23E8F2DF84 /* Pods_SakoutChairTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SakoutChairTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11468AF5C72A798067F340FB /* Pods_SakoutChair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SakoutChair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C2831AD26933D22009A85EF /* MqttPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttPayload.swift; sourceTree = "<group>"; };
-		1C2831B026933DC0009A85EF /* MqttRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttRequester.swift; sourceTree = "<group>"; };
 		3F1DCCC8A702DC30FC85CE98 /* Pods-SakoutChairTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChairTests.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChairTests/Pods-SakoutChairTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B19C197263D76FA00056E94 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7B1D0D39263ACBC4006C9E2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B1D0D46263ACF2B006C9E2A /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		7B1D0DF8263B4E7D006C9E2A /* work.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = work.json; sourceTree = "<group>"; };
 		7B41FA502645AAFA0052CF37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7B89CA6926934B1700AA62CC /* MqttRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MqttRequester.swift; sourceTree = "<group>"; };
+		7B89CA7226934B9A00AA62CC /* MqttPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MqttPayload.swift; sourceTree = "<group>"; };
+		7B89CA7326934B9A00AA62CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B8E5339268A576300674DC4 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		7B8E533E268A5B1200674DC4 /* PopUpActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpActionViewController.swift; sourceTree = "<group>"; };
 		7B8E545A268BB08500674DC4 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
@@ -131,14 +133,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C2831AF26933DB1009A85EF /* MqttNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				1C2831B026933DC0009A85EF /* MqttRequester.swift */,
-			);
-			path = MqttNetwork;
-			sourceTree = "<group>";
-		};
 		7B19C193263D749B00056E94 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +147,24 @@
 			isa = PBXGroup;
 			children = (
 				7B41FA502645AAFA0052CF37 /* User.swift */,
-				1C2831AD26933D22009A85EF /* MqttPayload.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B89CA6826934B1700AA62CC /* MqttNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				7B89CA6926934B1700AA62CC /* MqttRequester.swift */,
+			);
+			name = MqttNetwork;
+			path = SakoutChair/MqttNetwork;
+			sourceTree = SOURCE_ROOT;
+		};
+		7B89CA7126934B9A00AA62CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B89CA7226934B9A00AA62CC /* MqttPayload.swift */,
+				7B89CA7326934B9A00AA62CC /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,13 +186,6 @@
 				7B8E5464268BB13500674DC4 /* CarouselViewController.swift */,
 			);
 			path = Carousel;
-			sourceTree = "<group>";
-		};
-		7B8E557F268CB32F00674DC4 /* CustomTabBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 		7B8E5583268CB49300674DC4 /* HistoryCollection */ = {
@@ -253,10 +257,10 @@
 		7BF5F38226356244009FC0DC /* SakoutChair */ = {
 			isa = PBXGroup;
 			children = (
-				1C2831AF26933DB1009A85EF /* MqttNetwork */,
+				7B89CA7126934B9A00AA62CC /* Model */,
+				7B89CA6826934B1700AA62CC /* MqttNetwork */,
 				7B8E55AA268F060900674DC4 /* MyAccount */,
 				7B8E55A4268DC5F800674DC4 /* MyHistory */,
-				7B8E557F268CB32F00674DC4 /* CustomTabBar */,
 				7B8E5338268A574000674DC4 /* SetUpPopUp */,
 				7B41FA4F2645AAB50052CF37 /* Model */,
 				7BDF301F263DF97A00CE5F0B /* Extension */,
@@ -561,22 +565,23 @@
 				7BDF305A263EF60500CE5F0B /* ResetPasswordViewController.swift in Sources */,
 				7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */,
 				7B8E5586268CB4C200674DC4 /* HistoryCollectionViewCell.swift in Sources */,
-				1C2831B126933DC0009A85EF /* MqttRequester.swift in Sources */,
+				7B89CA7426934B9A00AA62CC /* MqttPayload.swift in Sources */,
 				7BF5F38826356244009FC0DC /* ViewController.swift in Sources */,
 				7B8E545B268BB08500674DC4 /* CarouselCell.swift in Sources */,
+				7B89CA6A26934B1700AA62CC /* MqttRequester.swift in Sources */,
 				7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */,
 				7BDF3021263DFB6100CE5F0B /* Custom+Colors.swift in Sources */,
 				7B8E55AC268F062900674DC4 /* MyAccountViewController.swift in Sources */,
 				7B8E5460268BB0CD00674DC4 /* CarouselView.swift in Sources */,
 				7B8E533F268A5B1200674DC4 /* PopUpActionViewController.swift in Sources */,
 				7B8E5465268BB13500674DC4 /* CarouselViewController.swift in Sources */,
-				1C2831AE26933D22009A85EF /* MqttPayload.swift in Sources */,
 				7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */,
 				7BF5F38626356244009FC0DC /* SceneDelegate.swift in Sources */,
 				7B8E55A6268DFA3600674DC4 /* MyHistoryViewController.swift in Sources */,
 				7B1D0D47263ACF2B006C9E2A /* FirebaseAuthManager.swift in Sources */,
 				7B41FA512645AAFA0052CF37 /* User.swift in Sources */,
 				7B19C198263D76FA00056E94 /* HomeViewController.swift in Sources */,
+				7B89CA7526934B9A00AA62CC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

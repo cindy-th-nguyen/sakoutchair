@@ -96,6 +96,8 @@ extension HomeViewController {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCollectionViewCellID", for: indexPath) as? HistoryCollectionViewCell {
             let name = names[indexPath.row]
             cell.configureCell(name: name)
+            cell.layer.cornerRadius = 20
+            cell.backgroundColor = UIColor.CustomColor.customBeige
             return cell
         }
         return UICollectionViewCell()
