@@ -10,7 +10,6 @@ import FirebaseAuth
 
 class MyAccountViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var updatePasswordButton: UIButton!
@@ -29,9 +28,10 @@ class MyAccountViewController: UIViewController {
         self.headerView.backgroundColor = UIColor.CustomColor.customBeige
         self.updatePasswordButton.customBlueRoundedButton()
         self.signOutButton.customBeigeRoundedBoutton()
+        self.passwordTextfield.isSecureTextEntry = true
         FirebaseAuthManager().getCurrentUser(completion: { user in
             guard let user = user else { return }
-            self.nameLabel.text = "\(user.name)'s account"
+//            self.nameLabel.text = "\(user.name)'s account"
             self.emailLabel.text = user.email
         })
     }

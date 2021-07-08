@@ -38,6 +38,7 @@
 		7BF5F39026356247009FC0DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF5F38E26356247009FC0DC /* LaunchScreen.storyboard */; };
 		7BF5F39B26356247009FC0DC /* SakoutChairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F39A26356247009FC0DC /* SakoutChairTests.swift */; };
 		7BF5F3A626356248009FC0DC /* SakoutChairUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F3A526356248009FC0DC /* SakoutChairUITests.swift */; };
+		7BFC0F832697658700AB16DC /* SetUpChairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC0F822697658700AB16DC /* SetUpChairViewController.swift */; };
 		EB2580B215D9957AE1D20832 /* Pods_SakoutChair_SakoutChairUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22A673A797BF80A5D4D9039 /* Pods_SakoutChair_SakoutChairUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		7BF5F3A126356248009FC0DC /* SakoutChairUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SakoutChairUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF5F3A526356248009FC0DC /* SakoutChairUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakoutChairUITests.swift; sourceTree = "<group>"; };
 		7BF5F3A726356248009FC0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BFC0F822697658700AB16DC /* SetUpChairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpChairViewController.swift; sourceTree = "<group>"; };
 		99214BAE2E215A3B866A4AEB /* Pods-SakoutChair-SakoutChairUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair-SakoutChairUITests.release.xcconfig"; path = "Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A5790970D7FCBDC7B68F7AC7 /* Pods-SakoutChair-SakoutChairUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair-SakoutChairUITests.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C03C1800B09D1D2345805587 /* Pods-SakoutChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChair/Pods-SakoutChair.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,15 +259,11 @@
 		7BF5F38226356244009FC0DC /* SakoutChair */ = {
 			isa = PBXGroup;
 			children = (
+				7BFC0F7D2697650A00AB16DC /* ViewController */,
 				7B89CA7126934B9A00AA62CC /* Model */,
 				7B89CA6826934B1700AA62CC /* MqttNetwork */,
-				7B8E55AA268F060900674DC4 /* MyAccount */,
-				7B8E55A4268DC5F800674DC4 /* MyHistory */,
-				7B8E5338268A574000674DC4 /* SetUpPopUp */,
 				7B41FA4F2645AAB50052CF37 /* Model */,
 				7BDF301F263DF97A00CE5F0B /* Extension */,
-				7B19C193263D749B00056E94 /* Home */,
-				7BCCB54E263AC6F3007A395C /* Auth */,
 				7BF5F38326356244009FC0DC /* AppDelegate.swift */,
 				7BF5F38526356244009FC0DC /* SceneDelegate.swift */,
 				7BF5F38726356244009FC0DC /* ViewController.swift */,
@@ -295,6 +293,27 @@
 				7BF5F3A726356248009FC0DC /* Info.plist */,
 			);
 			path = SakoutChairUITests;
+			sourceTree = "<group>";
+		};
+		7BFC0F7D2697650A00AB16DC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7BFC0F812697654E00AB16DC /* SetUpChair */,
+				7BCCB54E263AC6F3007A395C /* Auth */,
+				7B19C193263D749B00056E94 /* Home */,
+				7B8E5338268A574000674DC4 /* SetUpPopUp */,
+				7B8E55A4268DC5F800674DC4 /* MyHistory */,
+				7B8E55AA268F060900674DC4 /* MyAccount */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7BFC0F812697654E00AB16DC /* SetUpChair */ = {
+			isa = PBXGroup;
+			children = (
+				7BFC0F822697658700AB16DC /* SetUpChairViewController.swift */,
+			);
+			path = SetUpChair;
 			sourceTree = "<group>";
 		};
 		7EBEF2FE1499BA581C76B1C9 /* Pods */ = {
@@ -563,6 +582,7 @@
 			files = (
 				7B8E5578268CB00B00674DC4 /* Custom+UIButton.swift in Sources */,
 				7BDF305A263EF60500CE5F0B /* ResetPasswordViewController.swift in Sources */,
+				7BFC0F832697658700AB16DC /* SetUpChairViewController.swift in Sources */,
 				7BCCB550263AC786007A395C /* AuthViewController.swift in Sources */,
 				7B8E5586268CB4C200674DC4 /* HistoryCollectionViewCell.swift in Sources */,
 				7B89CA7426934B9A00AA62CC /* MqttPayload.swift in Sources */,

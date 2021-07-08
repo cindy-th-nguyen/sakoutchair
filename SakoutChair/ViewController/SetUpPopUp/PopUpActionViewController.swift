@@ -10,6 +10,7 @@ import UIKit
 protocol PopUpDelegate {
     func handleAction(action: Bool)
 }
+
 class PopUpActionViewController: UIViewController {
     static let identifier = "PopUpActionViewController"
     var delegate: PopUpDelegate?
@@ -35,11 +36,9 @@ class PopUpActionViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func cancelSetUpAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     static func showPopup(parentVC: UIViewController){
         if let popupViewController = UIStoryboard(name: "PopUp", bundle: nil).instantiateViewController(withIdentifier: "PopUpActionViewController") as? PopUpActionViewController {
