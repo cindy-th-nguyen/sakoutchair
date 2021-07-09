@@ -15,7 +15,7 @@ import Foundation
 // MARK: - CapteurJSON
 class MqttPayload: Codable {
     let payload: Payload
-
+    
     init(payload: Payload) {
         self.payload = payload
     }
@@ -23,11 +23,19 @@ class MqttPayload: Codable {
 
 // MARK: - Capteurs
 class Payload: Codable {
-    let sonar: [Int]
-    let isHere: Bool
-
-    init(sonar: [Int], isHere: Bool) {
+    let sonar: [Float]
+    let seatLeft: Bool
+    let seatRight: Bool
+    
+    init(sonar: [Float], seatLeft: Bool, seatRight: Bool) {
         self.sonar = sonar
-        self.isHere = isHere
+        self.seatLeft = seatLeft
+        self.seatRight = seatRight
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case sonar 
+        case seatLeft = "seat_left"
+        case seatRight = "seat_right"
     }
 }

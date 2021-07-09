@@ -60,6 +60,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     private func setupCarousel() {
+        //TO DO: 
+        guard let userPayload = UserPayload.payload else {
+            return
+        }
         authManager.getCurrentUser { user in
             guard let user = user else { return }
             if !user.hasConfigure {

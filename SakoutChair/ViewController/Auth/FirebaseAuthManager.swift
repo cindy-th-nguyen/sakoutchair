@@ -37,7 +37,6 @@ public class FirebaseAuthManager {
         var currentUser: User?
         let userID = Auth.auth().currentUser?.uid
         ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
             let value = snapshot.value as? NSDictionary
             let userEmail = value?["email"] as? String ?? ""
             let userName = value?["name"] as? String ?? ""
@@ -47,5 +46,19 @@ public class FirebaseAuthManager {
         }) { (error) in
             print(error.localizedDescription)
         }
+    }
+    
+    func sendDataSensorsToDatabase(payload: Payload) {
+        ref = Database.database(url: "https://sakoutchair-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+        let date = Date().string(format: "yyyy-MM-dd")
+        let hour = Date().string(format: "HH:mm")
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        self.ref?.child("users").child(uid).child("history").child(date).child("\(hour)").setValue([
+            "sonars": payload.sonar,
+            "seatRight": payload.seatRight,
+            "seatLeft": payload.seatLeft
+        ])
     }
 }

@@ -13,5 +13,4 @@ struct User {
     var name: String
     var email: String
     var hasConfigure: Bool = false
-    var referenceData: [Any?] = [0,0,0,false]
 }

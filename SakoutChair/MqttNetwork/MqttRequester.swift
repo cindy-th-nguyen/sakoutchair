@@ -7,21 +7,30 @@
 
 import Foundation
 import Moscapsule
+import FirebaseDatabase
+import FirebaseAuth
 
+struct UserPayload {
+    static var payload: Payload?
+}
 public class MqttRequester {
     
-    static var mqttClient:MQTTClient?
+    static var mqttClient: MQTTClient?
+    var ref: DatabaseReference! {
+        get{
+            return Database.database(url: "https://sakoutchair-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+        }
+    }
     
     public static func prepareRequester() {
-        // set MQTT Client Configuration
-        let mqttConfig = MQTTConfig(clientId: "99ab8a569d244195954e17b8d842c8d6", host: "test.mosquitto.org", port: 1883, keepAlive: 60)
+        let mqttConfig = MQTTConfig(clientId: "99ab8a569d244195954e17b8d842c8d6", host: "test.mosquitto.org", port: 1883, keepAlive: 300)
         
         mqttConfig.onConnectCallback = { returnCode in
             print("CONNECTED : \(returnCode.description)")
         }
         
         mqttConfig.onDisconnectCallback = { returnCode in
-                print("DISCCONECTED : \(returnCode)")
+            print("DISCCONECTED : \(returnCode)")
         }
         
         mqttConfig.onMessageCallback = { mqttMessage in
@@ -32,19 +41,18 @@ public class MqttRequester {
             
             if mqttMessage.topic == "sakoutcher/test/payload" {
                 print("PAYLOAD CONVERT")
-                let payloadJson = try? JSONDecoder().decode(MqttPayload.self, from: Data(msg.data(using: .utf8)!))
-                //enregistrer le payload ds une classe, un tableau en singleton ?? je sais pas mais du coup après enregistrement les données seront dispo pr dessiner le charts
-                //faire direct un enregistrement ds bdd firebase à partir d'ici ?
-                print("🐭\(String(describing: payloadJson))")
+                do {
+                    let decoder = JSONDecoder()
+                    let payloadJson = try decoder.decode(MqttPayload.self, from: Data(msg.utf8))
+                    FirebaseAuthManager().sendDataSensorsToDatabase(payload: payloadJson.payload)
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
         }
-        
         mqttConfig.onSubscribeCallback = { (messageId, grantedQos) in
-          print("subscribed (mid=\(messageId),grantedQos=\(grantedQos))")
+            print("subscribed (mid=\(messageId),grantedQos=\(grantedQos))")
         }
-        
-        // create new MQTT Connection
         self.mqttClient = MQTT.newConnection(mqttConfig)
     }
-    
 }

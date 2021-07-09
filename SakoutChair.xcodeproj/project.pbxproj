@@ -39,6 +39,7 @@
 		7BF5F39B26356247009FC0DC /* SakoutChairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F39A26356247009FC0DC /* SakoutChairTests.swift */; };
 		7BF5F3A626356248009FC0DC /* SakoutChairUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F3A526356248009FC0DC /* SakoutChairUITests.swift */; };
 		7BFC0F832697658700AB16DC /* SetUpChairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC0F822697658700AB16DC /* SetUpChairViewController.swift */; };
+		7BFC0FD52697CA6700AB16DC /* Custom+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC0FD42697CA6700AB16DC /* Custom+Date.swift */; };
 		EB2580B215D9957AE1D20832 /* Pods_SakoutChair_SakoutChairUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22A673A797BF80A5D4D9039 /* Pods_SakoutChair_SakoutChairUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		7BF5F3A526356248009FC0DC /* SakoutChairUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakoutChairUITests.swift; sourceTree = "<group>"; };
 		7BF5F3A726356248009FC0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BFC0F822697658700AB16DC /* SetUpChairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpChairViewController.swift; sourceTree = "<group>"; };
+		7BFC0FD42697CA6700AB16DC /* Custom+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom+Date.swift"; sourceTree = "<group>"; };
 		99214BAE2E215A3B866A4AEB /* Pods-SakoutChair-SakoutChairUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair-SakoutChairUITests.release.xcconfig"; path = "Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A5790970D7FCBDC7B68F7AC7 /* Pods-SakoutChair-SakoutChairUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair-SakoutChairUITests.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChair-SakoutChairUITests/Pods-SakoutChair-SakoutChairUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C03C1800B09D1D2345805587 /* Pods-SakoutChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakoutChair.debug.xcconfig"; path = "Target Support Files/Pods-SakoutChair/Pods-SakoutChair.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				7BDF3020263DFB6100CE5F0B /* Custom+Colors.swift */,
 				7B8E5577268CB00B00674DC4 /* Custom+UIButton.swift */,
+				7BFC0FD42697CA6700AB16DC /* Custom+Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */,
 				7BDF3021263DFB6100CE5F0B /* Custom+Colors.swift in Sources */,
 				7B8E55AC268F062900674DC4 /* MyAccountViewController.swift in Sources */,
+				7BFC0FD52697CA6700AB16DC /* Custom+Date.swift in Sources */,
 				7B8E5460268BB0CD00674DC4 /* CarouselView.swift in Sources */,
 				7B8E533F268A5B1200674DC4 /* PopUpActionViewController.swift in Sources */,
 				7B8E5465268BB13500674DC4 /* CarouselViewController.swift in Sources */,
