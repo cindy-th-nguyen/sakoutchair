@@ -13,4 +13,11 @@ struct User {
     var name: String
     var email: String
     var hasConfigure: Bool = false
+    var history: [UserSensorsData]?
+}
+
+struct UserSensorsData {
+    var date: String
+    var hour: String
+    var payload: Payload
 }

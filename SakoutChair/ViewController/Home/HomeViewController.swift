@@ -12,16 +12,14 @@ import ZKCarousel
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PopUpDelegate {
     let authManager = FirebaseAuthManager()
-    let names: [String] = ["Test", "Test2", "Test3", "Test4", "Test5"]
     var userHasConfigure: Bool = false
+    var userSensorsDataArray: [UserSensorsData]?
     @IBOutlet weak var mainCardView: UIView!
     @IBOutlet weak var mainCarousel: ZKCarousel!
     @IBOutlet weak var historyCollectionView: UICollectionView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpMainCard()
         setupCarousel()
         authManager.getCurrentUser { user in
             guard let user = user else { return }
@@ -29,7 +27,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 PopUpActionViewController.showPopup(parentVC: self)
             }
         }
-        
         MqttRequester.prepareRequester()
         guard let mqttClient = MqttRequester.mqttClient else {
             return
@@ -41,6 +38,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.historyCollectionView.dataSource = self
         self.historyCollectionView.alwaysBounceHorizontal = true
         definesPresentationContext = true
+        
+        authManager.getDataHistoryByUser { payloadData in
+            guard let payloadData = payloadData else { return }
+            self.userSensorsDataArray?.append(payloadData)
+        }
+        
+        print("🐭 \(String(describing: userSensorsDataArray))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,9 +55,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     func setUpComponents() {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.isNavigationBarHidden = true
-    }
-    
-    func setUpMainCard() {
+        
         mainCardView.clipsToBounds = true
         mainCardView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         mainCardView.layer.cornerRadius = 30
@@ -61,9 +63,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     private func setupCarousel() {
         //TO DO: 
-        guard let userPayload = UserPayload.payload else {
-            return
-        }
+//        guard let userPayload = UserPayload.payload else {
+//            return
+//        }
         authManager.getCurrentUser { user in
             guard let user = user else { return }
             if !user.hasConfigure {
@@ -113,13 +115,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return names.count
+        var numberOfCell = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            print("wait...")
+        }
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCollectionViewCellID", for: indexPath) as? HistoryCollectionViewCell {
-            let name = names[indexPath.row]
-            cell.configureCell(name: name)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                
+            }
+            cell.configureCell(name: "Coucou")
             cell.layer.cornerRadius = 20
             cell.backgroundColor = UIColor.CustomColor.customBeige
             return cell
