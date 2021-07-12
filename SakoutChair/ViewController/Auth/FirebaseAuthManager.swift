@@ -47,7 +47,9 @@ public class FirebaseAuthManager {
         }
     }
     
-    func getDataHistoryByUser(completion: @escaping ((UserSensorsData?)->Void)){
+    func getDataHistoryByUser(completion: @escaping ([UserSensorsData])->Void){
+    let group = DispatchGroup()
+    var sensorArray: [UserSensorsData] = []
         let ref = Database.database(url: "https://sakoutchair-default-rtdb.europe-west1.firebasedatabase.app/").reference()
         let userID = Auth.auth().currentUser?.uid
         var userSensorsData: UserSensorsData?
@@ -55,17 +57,26 @@ public class FirebaseAuthManager {
             if let dates = snapshot.value as? [String: [String: Any]] {
                 for (date, details) in dates {
                     for (hour, _) in details {
+                        group.enter()
                         ref.child("users").child(userID!).child("history").child(date).child(hour).observeSingleEvent(of: .value, with: { snapshot in
+                            group.leave()
                             if let sensorsValue = snapshot.value as? NSDictionary {
                                 let seatLeft = sensorsValue["seatLeft"] as? Bool ?? false
                                 let seatRight = sensorsValue["seatLeft"] as? Bool ?? false
                                 let sonars = sensorsValue["sonars"] as? [Float] ?? []
                                 userSensorsData = UserSensorsData(date: date, hour: hour, payload: Payload(sonar: sonars, seatLeft: seatLeft, seatRight: seatRight))
-                                completion(userSensorsData)
+                                print("🐭 \( String(describing: userSensorsData))")
+                                guard let userSensorsData = userSensorsData else {
+                                    return
+                                }
+                                sensorArray.append(userSensorsData)
                             }
                         })
                     }
                 }
+            }
+            group.notify(queue: DispatchQueue.global()) {
+                completion(sensorArray)
             }
         }) { (error) in
             print(error.localizedDescription)

@@ -39,12 +39,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.historyCollectionView.alwaysBounceHorizontal = true
         definesPresentationContext = true
         
-        authManager.getDataHistoryByUser { payloadData in
-            guard let payloadData = payloadData else { return }
-            self.userSensorsDataArray?.append(payloadData)
+        authManager.getDataHistoryByUser { [weak self] payloadData in
+            guard let self = self else { return }
+            self.userSensorsDataArray = payloadData
+            DispatchQueue.main.async {
+                self.historyCollectionView.reloadData()
+            }
+            print("🐭 \(String(describing: self.userSensorsDataArray))")
         }
-        
-        print("🐭 \(String(describing: userSensorsDataArray))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,19 +117,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var numberOfCell = 0
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            print("wait...")
-        }
-        return 4
+        guard let userSensorsDataArray = userSensorsDataArray else { return 0 }
+        return userSensorsDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCollectionViewCellID", for: indexPath) as? HistoryCollectionViewCell {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                
-            }
-            cell.configureCell(name: "Coucou")
+            guard let userSensorsDataArray = userSensorsDataArray else { return UICollectionViewCell() }
+            let historyValue = userSensorsDataArray[indexPath.row]
+            cell.configureCell(date: historyValue.date, hour: historyValue.hour, wasGood: true)
             cell.layer.cornerRadius = 20
             cell.backgroundColor = UIColor.CustomColor.customBeige
             return cell
