@@ -17,10 +17,10 @@ class HistoryCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func configureCell(date: String, hour: String, wasGood: Bool) {
-        self.nameLabel.text = date
-        self.dateLabel.text = hour
-        self.averageDayImage.image = wasGood ? UIImage(named: "good-image") : UIImage(named: "bad-image")
+    func configureCell(date: String, hadGoodPosition: Bool) {
+        self.nameLabel.text = hadGoodPosition ? "Good" : "Bad"
+        self.dateLabel.text = date
+        self.averageDayImage.image = hadGoodPosition ? UIImage(named: "good-image") : UIImage(named: "bad-image")
         self.averageDayImage.frame = CGRect(x: 100, y: 150, width: 150, height: 150)
     }
 }

@@ -32,20 +32,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             return
         }
         mqttClient.subscribe("sakoutcher/test/payload", qos: 0)
-        
-        self.navigationController?.isNavigationBarHidden = false
-        self.historyCollectionView.delegate = self
-        self.historyCollectionView.dataSource = self
-        self.historyCollectionView.alwaysBounceHorizontal = true
-        definesPresentationContext = true
-        
         authManager.getDataHistoryByUser { [weak self] payloadData in
             guard let self = self else { return }
             self.userSensorsDataArray = payloadData
             DispatchQueue.main.async {
                 self.historyCollectionView.reloadData()
             }
-            print("🐭 \(String(describing: self.userSensorsDataArray))")
         }
     }
     
@@ -54,9 +46,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         setUpComponents()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     func setUpComponents() {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.isNavigationBarHidden = true
+        self.historyCollectionView.delegate = self
+        self.historyCollectionView.dataSource = self
+        self.historyCollectionView.alwaysBounceHorizontal = true
+        self.historyCollectionView.backgroundColor = UIColor.CustomColor.customBeige
+        view.backgroundColor = UIColor.CustomColor.customBeige
+        definesPresentationContext = true
         
         mainCardView.clipsToBounds = true
         mainCardView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
@@ -65,9 +67,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     private func setupCarousel() {
         //TO DO: 
-//        guard let userPayload = UserPayload.payload else {
-//            return
-//        }
+        //        guard let userPayload = UserPayload.payload else {
+        //            return
+        //        }
         authManager.getCurrentUser { user in
             guard let user = user else { return }
             if !user.hasConfigure {
@@ -105,7 +107,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func handleAction(action: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if action {
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let setUpViewController = storyBoard.instantiateViewController(withIdentifier: "SetUpChairID") as! SetUpChairViewController
@@ -117,34 +119,34 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let userSensorsDataArray = userSensorsDataArray else { return 0 }
-        return userSensorsDataArray.count
+        let dataByDate = Dictionary(grouping: userSensorsDataArray ?? [], by: { $0.date })
+        return dataByDate.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let userSensorsDataArray = userSensorsDataArray else {
+            return UICollectionViewCell()
+        }
+        var datesArray = Dictionary(grouping: userSensorsDataArray, by: { $0.date }).compactMap { $0.key }
+        datesArray.sort { $0 > $1 }
+       
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCollectionViewCellID", for: indexPath) as? HistoryCollectionViewCell {
-            guard let userSensorsDataArray = userSensorsDataArray else { return UICollectionViewCell() }
-            let historyValue = userSensorsDataArray[indexPath.row]
-            cell.configureCell(date: historyValue.date, hour: historyValue.hour, wasGood: true)
+            cell.configureCell(date: "", hadGoodPosition: true)
+            let date = datesArray[indexPath.row]
+            cell.configureCell(date: date, hadGoodPosition: true)
             cell.layer.cornerRadius = 20
-            cell.backgroundColor = UIColor.CustomColor.customBeige
+            cell.backgroundColor = .white
             return cell
         }
+        historyCollectionView.reloadData()
         return UICollectionViewCell()
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100.0, height: 100.0)
-    }
-    
-    // item spacing = vertical spacing in horizontal flow
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
     
-    // line spacing = horizontal spacing in horizontal flow
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 15
     }

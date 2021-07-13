@@ -65,7 +65,6 @@ public class FirebaseAuthManager {
                                 let seatRight = sensorsValue["seatLeft"] as? Bool ?? false
                                 let sonars = sensorsValue["sonars"] as? [Float] ?? []
                                 userSensorsData = UserSensorsData(date: date, hour: hour, payload: Payload(sonar: sonars, seatLeft: seatLeft, seatRight: seatRight))
-                                print("🐭 \( String(describing: userSensorsData))")
                                 guard let userSensorsData = userSensorsData else {
                                     return
                                 }
