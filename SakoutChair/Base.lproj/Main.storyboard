@@ -807,6 +807,89 @@
             </objects>
             <point key="canvasLocation" x="189.85507246376812" y="-363.61607142857139"/>
         </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="bkd-Qh-roI">
+            <objects>
+                <viewController storyboardIdentifier="chartID" id="oKa-WB-kpq" customClass="ChartViewController" customModule="SakoutChair" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UtC-c3-RzG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28g-cm-XOn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SakoutChair." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POb-ZA-zPZ">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="52"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C58-QZ-abT">
+                                        <rect key="frame" x="0.0" y="117" width="414" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="zwp-S8-erJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77454036500000001" green="0.9022723117" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="C58-QZ-abT" firstAttribute="leading" secondItem="POb-ZA-zPZ" secondAttribute="leading" id="Abc-gN-BMW"/>
+                                    <constraint firstItem="POb-ZA-zPZ" firstAttribute="top" secondItem="28g-cm-XOn" secondAttribute="top" constant="50" id="G4n-va-h7Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="POb-ZA-zPZ" secondAttribute="trailing" id="Xva-f8-MJZ"/>
+                                    <constraint firstItem="POb-ZA-zPZ" firstAttribute="leading" secondItem="28g-cm-XOn" secondAttribute="leading" id="enJ-sZ-8TC"/>
+                                    <constraint firstAttribute="bottom" secondItem="C58-QZ-abT" secondAttribute="bottom" constant="46" id="thw-in-E4Y"/>
+                                    <constraint firstItem="C58-QZ-abT" firstAttribute="trailing" secondItem="POb-ZA-zPZ" secondAttribute="trailing" id="uwg-in-Pwi"/>
+                                    <constraint firstItem="C58-QZ-abT" firstAttribute="top" secondItem="POb-ZA-zPZ" secondAttribute="bottom" constant="15" id="zpf-5a-YXv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-01-01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRB-QO-vuH">
+                                <rect key="frame" x="68" y="232" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-Id-eNu">
+                                <rect key="frame" x="15" y="232" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-Jg-gZ2" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="263" width="414" height="581"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ULc-vN-Fsn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hRB-QO-vuH" firstAttribute="leading" secondItem="Czd-Id-eNu" secondAttribute="trailing" constant="8" symbolic="YES" id="35b-vP-u8B"/>
+                            <constraint firstItem="28g-cm-XOn" firstAttribute="trailing" secondItem="ULc-vN-Fsn" secondAttribute="trailing" id="IBB-6l-xSt"/>
+                            <constraint firstItem="XaK-Jg-gZ2" firstAttribute="top" secondItem="hRB-QO-vuH" secondAttribute="bottom" constant="10" id="IY0-JO-IAp"/>
+                            <constraint firstItem="hRB-QO-vuH" firstAttribute="centerY" secondItem="Czd-Id-eNu" secondAttribute="centerY" id="KeZ-wg-Moc"/>
+                            <constraint firstAttribute="bottom" secondItem="XaK-Jg-gZ2" secondAttribute="bottom" constant="52" id="XuC-ta-Rb9"/>
+                            <constraint firstItem="Czd-Id-eNu" firstAttribute="leading" secondItem="ULc-vN-Fsn" secondAttribute="leading" constant="15" id="atL-6s-2B0"/>
+                            <constraint firstItem="ULc-vN-Fsn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hRB-QO-vuH" secondAttribute="trailing" symbolic="YES" id="gMC-jz-W7P"/>
+                            <constraint firstItem="28g-cm-XOn" firstAttribute="width" secondItem="28g-cm-XOn" secondAttribute="height" multiplier="207:101" id="gRk-kN-e6B"/>
+                            <constraint firstItem="28g-cm-XOn" firstAttribute="leading" secondItem="ULc-vN-Fsn" secondAttribute="leading" id="oi6-1d-hV5"/>
+                            <constraint firstItem="Czd-Id-eNu" firstAttribute="top" secondItem="28g-cm-XOn" secondAttribute="bottom" constant="30" id="uZi-q9-Lm1"/>
+                            <constraint firstItem="XaK-Jg-gZ2" firstAttribute="leading" secondItem="ULc-vN-Fsn" secondAttribute="leading" id="w7W-Xc-0h0"/>
+                            <constraint firstItem="XaK-Jg-gZ2" firstAttribute="trailing" secondItem="ULc-vN-Fsn" secondAttribute="trailing" id="yee-BJ-Nrt"/>
+                            <constraint firstItem="28g-cm-XOn" firstAttribute="top" secondItem="UtC-c3-RzG" secondAttribute="top" id="zk1-yE-AYl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="hRB-QO-vuH" id="azY-LX-dJV"/>
+                        <outlet property="headerView" destination="28g-cm-XOn" id="mzI-s2-37G"/>
+                        <outlet property="lineChartView" destination="XaK-Jg-gZ2" id="e08-6R-jwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DbV-Xq-tSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="-364.28571428571428"/>
+        </scene>
         <!--Set Up Chair View Controller-->
         <scene sceneID="4VK-eC-qiG">
             <objects>
@@ -900,7 +983,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hj-mO-KVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895.6521739130435" y="-364.28571428571428"/>
+            <point key="canvasLocation" x="190" y="303"/>
         </scene>
     </scenes>
     <resources>
@@ -909,6 +992,9 @@
         <image name="tuto-seat" width="340" height="215"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

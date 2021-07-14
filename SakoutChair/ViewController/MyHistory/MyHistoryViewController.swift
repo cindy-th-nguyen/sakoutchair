@@ -71,6 +71,17 @@ class MyHistoryViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         var datesArray = Dictionary(grouping: userSensorsDataArray, by: { $0.date }).compactMap { $0.key }
         datesArray.sort { $0 > $1 }
-        print(datesArray[indexPath.row])
+        var dataByDate: [String: Payload] = [:]
+        for data in userSensorsDataArray {
+            if datesArray[indexPath.row] == data.date {
+                dataByDate[data.hour] = data.payload
+            }
+        }
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let chartViewController = storyBoard.instantiateViewController(withIdentifier: "chartID") as! ChartViewController
+        chartViewController.date = datesArray[indexPath.row]
+        chartViewController.userSensorsDataArray = dataByDate
+        self.navigationController!.pushViewController(chartViewController, animated: true)
     }
 }

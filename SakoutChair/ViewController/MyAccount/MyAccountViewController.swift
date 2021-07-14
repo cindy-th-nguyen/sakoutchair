@@ -37,6 +37,12 @@ class MyAccountViewController: UIViewController {
     }
     
     @IBAction func updatePasswordDidTap(_ sender: Any) {
+        guard let password = passwordTextfield.text else {
+            return
+        }
+        Auth.auth().currentUser?.updatePassword(to: password) { (error) in
+            print(error as Any)
+        }
     }
     
     @IBAction func signOutButtonDidTap(_ sender: Any) {

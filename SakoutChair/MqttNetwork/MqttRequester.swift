@@ -23,7 +23,8 @@ public class MqttRequester {
     }
     
     public static func prepareRequester() {
-        let mqttConfig = MQTTConfig(clientId: "99ab8a569d244195954e17b8d842c8d6", host: "test.mosquitto.org", port: 1883, keepAlive: 300)
+        let cid = "Sakoutchair-" + String(ProcessInfo().processIdentifier)
+                let mqttConfig = MQTTConfig(clientId:cid, host: "test.mosquitto.org", port: 1883, keepAlive: 300)
         
         mqttConfig.onConnectCallback = { returnCode in
             print("CONNECTED : \(returnCode.description)")

@@ -31,6 +31,7 @@
 		7BDF302C263E135600CE5F0B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF302B263E135600CE5F0B /* SignUpViewController.swift */; };
 		7BDF305A263EF60500CE5F0B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF3059263EF60500CE5F0B /* ResetPasswordViewController.swift */; };
 		7BE434CF269E4C080002901C /* MyHistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE434CE269E4C080002901C /* MyHistoryCollectionViewCell.swift */; };
+		7BE434EE269EF68F0002901C /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE434ED269EF68F0002901C /* ChartViewController.swift */; };
 		7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38326356244009FC0DC /* AppDelegate.swift */; };
 		7BF5F38626356244009FC0DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38526356244009FC0DC /* SceneDelegate.swift */; };
 		7BF5F38826356244009FC0DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5F38726356244009FC0DC /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		7BDF302B263E135600CE5F0B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7BDF3059263EF60500CE5F0B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		7BE434CE269E4C080002901C /* MyHistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BE434ED269EF68F0002901C /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		7BF5F38026356244009FC0DC /* SakoutChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SakoutChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF5F38326356244009FC0DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BF5F38526356244009FC0DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		7BE434EC269EF6720002901C /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				7BE434ED269EF68F0002901C /* ChartViewController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		7BF5F37726356244009FC0DC = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +314,7 @@
 		7BFC0F7D2697650A00AB16DC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7BE434EC269EF6720002901C /* Chart */,
 				7BFC0F812697654E00AB16DC /* SetUpChair */,
 				7BCCB54E263AC6F3007A395C /* Auth */,
 				7B19C193263D749B00056E94 /* Home */,
@@ -605,6 +616,7 @@
 				7BF5F38426356244009FC0DC /* AppDelegate.swift in Sources */,
 				7BE434CF269E4C080002901C /* MyHistoryCollectionViewCell.swift in Sources */,
 				7BF5F38626356244009FC0DC /* SceneDelegate.swift in Sources */,
+				7BE434EE269EF68F0002901C /* ChartViewController.swift in Sources */,
 				7B8E55A6268DFA3600674DC4 /* MyHistoryViewController.swift in Sources */,
 				7B1D0D47263ACF2B006C9E2A /* FirebaseAuthManager.swift in Sources */,
 				7B41FA512645AAFA0052CF37 /* User.swift in Sources */,

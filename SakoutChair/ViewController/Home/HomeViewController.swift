@@ -119,7 +119,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let dataByDate = Dictionary(grouping: userSensorsDataArray ?? [], by: { $0.date })
+        guard let userSensorsDataArray = userSensorsDataArray else {
+            return 0
+        }
+        let dataByDate = Dictionary(grouping: userSensorsDataArray, by: { $0.date })
         return dataByDate.count
     }
     
