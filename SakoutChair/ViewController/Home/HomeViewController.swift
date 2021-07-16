@@ -19,6 +19,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var historyCollectionView: UICollectionView!
     @IBOutlet weak var liveChartButton: UIButton!
     
+    var seatData : [Bool] {
+        get {
+            return SeatDataManager.sharedInstance.data
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCarousel()
@@ -40,6 +46,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.historyCollectionView.reloadData()
             }
         }
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -118,14 +127,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     @IBAction func onLiveChartButton(_ sender: UIButton) {
-        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let liveChartViewController = storyBoard.instantiateViewController(withIdentifier: "liveChart") as! LiveChartViewController
         self.navigationController!.pushViewController(liveChartViewController, animated: true)
     }
-    
-    
-    
 }
 
 extension HomeViewController {

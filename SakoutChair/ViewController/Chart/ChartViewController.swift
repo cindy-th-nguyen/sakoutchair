@@ -13,7 +13,6 @@ class ChartViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
     
-    var numbers: [Int] = [1,1,2,3,6,2,4]
     var userSensorsDataArray: [String: Payload] = [:]
     let authManager = FirebaseAuthManager()
     var date: String = ""
@@ -75,6 +74,13 @@ class ChartViewController: UIViewController {
         lineSonar1.colors = [NSUIColor.blue]
         lineSonar2.colors = [NSUIColor.red]
         lineSonar3.colors = [NSUIColor.green]
+        
+        lineSonar1.drawCirclesEnabled = false
+        lineSonar1.drawValuesEnabled = false
+        lineSonar2.drawCirclesEnabled = false
+        lineSonar2.drawValuesEnabled = false
+        lineSonar3.drawCirclesEnabled = false
+        lineSonar3.drawValuesEnabled = false
         
         data.addDataSet(lineSonar1)
         data.addDataSet(lineSonar2)

@@ -48,3 +48,12 @@ class SensorDataManager {
         return instance
     }()
 }
+
+class SeatDataManager {
+    var data: [Bool] = [false, false]
+    static let sharedInstance: SeatDataManager = {
+        let instance = SeatDataManager()
+        return instance
+    }()
+}
+
