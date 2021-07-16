@@ -26,7 +26,6 @@ class LiveChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(
@@ -38,7 +37,7 @@ class LiveChartViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     @objc func updateChart(notification: Notification)  {
