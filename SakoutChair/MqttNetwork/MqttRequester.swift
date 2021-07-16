@@ -46,6 +46,9 @@ public class MqttRequester {
                     let decoder = JSONDecoder()
                     let payloadJson = try decoder.decode(MqttPayload.self, from: Data(msg.utf8))
                     FirebaseAuthManager().sendDataSensorsToDatabase(payload: payloadJson.payload)
+                    let sonars = payloadJson.payload.sonar
+                    SensorDataManager.sharedInstance.data = sonars
+                    NotificationCenter.default.post(name: Notification.Name("reloadChart"), object: nil)
                 } catch {
                     print(error.localizedDescription)
                 }

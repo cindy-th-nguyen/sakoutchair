@@ -39,3 +39,12 @@ class Payload: Codable {
         case seatRight = "seat_right"
     }
 }
+
+
+class SensorDataManager {
+    var data:[Float] = [0,0,0]
+    static let sharedInstance: SensorDataManager = {
+        let instance = SensorDataManager()
+        return instance
+    }()
+}

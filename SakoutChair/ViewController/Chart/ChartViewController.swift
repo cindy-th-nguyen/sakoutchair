@@ -22,7 +22,9 @@ class ChartViewController: UIViewController {
         super.viewDidLoad()
         configureComponents()
         updateChart()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
     
     func configureComponents() {
         self.headerView.backgroundColor = UIColor.CustomColor.customBeige

@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var mainCardView: UIView!
     @IBOutlet weak var mainCarousel: ZKCarousel!
     @IBOutlet weak var historyCollectionView: UICollectionView!
+    @IBOutlet weak var liveChartButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +116,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
     }
+    
+    @IBAction func onLiveChartButton(_ sender: UIButton) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let liveChartViewController = storyBoard.instantiateViewController(withIdentifier: "liveChart") as! LiveChartViewController
+        self.navigationController!.pushViewController(liveChartViewController, animated: true)
+    }
+    
+    
+    
 }
 
 extension HomeViewController {
