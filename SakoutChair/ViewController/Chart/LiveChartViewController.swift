@@ -48,26 +48,6 @@ class LiveChartViewController: UIViewController {
             var barChartEntry2  = [BarChartDataEntry]()
             var barChartEntry3  = [BarChartDataEntry]()
             let numbers = self.numbers
-//            lineChartEntry1.append(ChartDataEntry(x: 0, y: Double(numbers[0])))
-//            lineChartEntry2.append(ChartDataEntry(x: 1, y: Double(numbers[1])))
-//            lineChartEntry3.append(ChartDataEntry(x: 2, y: Double(numbers[2])))
-//
-//            let lineChartData1 = LineChartDataSet(entries: lineChartEntry1, label: "S1")
-//            lineChartData1.colors = [NSUIColor.red]
-//            let lineChartData2 = LineChartDataSet(entries: lineChartEntry2, label: "S2")
-//            lineChartData2.colors = [NSUIColor.green]
-//            let lineChartData3 = LineChartDataSet(entries: lineChartEntry3, label: "S3")
-//            lineChartData3.colors = [NSUIColor.blue]
-//
-//            let allChartData = LineChartData()
-//            allChartData.addDataSet(lineChartData1)
-//            allChartData.addDataSet(lineChartData2)
-//            allChartData.addDataSet(lineChartData3)
-//
-//
-//            self.liveChart.data = allChartData
-//            self.liveChart.chartDescription?.text = "Current sonnar value"
-            
             
             //MARK: - LIVE ONE DATA
             barChartEntry1.append(BarChartDataEntry(x: 0, y: Double(numbers[0])))
