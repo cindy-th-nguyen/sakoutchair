@@ -12,6 +12,7 @@ class TimerController {
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer.fire()
     }
     
     @objc func timerAction(){

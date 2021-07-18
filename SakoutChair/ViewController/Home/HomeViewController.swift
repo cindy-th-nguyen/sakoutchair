@@ -46,6 +46,17 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.historyCollectionView.reloadData()
             }
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(
+        self.testSeat(notification:)), name: Notification.Name("testSeat"),
+        object: nil)
+    }
+    
+    @objc func testSeat(notification: Notification)  {
+        print("test seat \(seatData)")
+        let timer = TimerController()
+        timer.startTimer()
+//        DispatchQueue.main.async {
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

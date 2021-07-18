@@ -33,7 +33,6 @@ class ChartViewController: UIViewController {
     }
     
     func updateChart() {
-        
         let sorted = orderSensorsByHour2()
         print(sorted)
         
@@ -57,21 +56,6 @@ class ChartViewController: UIViewController {
             )
             i += 1
         }
-        
-//        for number in 0..<(sorted[0] as AnyObject).count {
-//            let value = ChartDataEntry(x: Double(number), y: Double(sorted[0][number]))
-//            lineChartEntry1.append(value)
-//        }
-//
-//        for number in 0..<sonarMid.count {
-//            let value = ChartDataEntry(x: Double(number), y: Double(sonarMid[number]))
-//            lineChartEntry2.append(value)
-//        }
-//
-//        for number in 0..<sonarBot.count {
-//            let value = ChartDataEntry(x: Double(number), y: Double(sonarBot[number]))
-//            lineChartEntry3.append(value)
-//        }
         
         let lineSonar1 = LineChartDataSet(entries: lineChartEntry1, label: "Sonar Top")
         let lineSonar2 = LineChartDataSet(entries: lineChartEntry2, label: "Sonar Mid")
@@ -107,8 +91,6 @@ class ChartViewController: UIViewController {
                 }
             }
         }
-        
-        // averageTop = [1, 2, 3, 4, 5]
         var averageTops: [Float] = []
         var averageMids: [Float] = []
         var averageBots: [Float] = []
@@ -130,10 +112,6 @@ class ChartViewController: UIViewController {
             averageBots.append(averageBot)
             floatHours.append(Float(key) ?? 0)
         }
-        
-        print(averageTops)
-        print(averageMids)
-        print(averageBots)
         
         return [
             averageTops,

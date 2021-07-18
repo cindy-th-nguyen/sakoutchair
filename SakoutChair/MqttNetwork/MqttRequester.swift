@@ -52,6 +52,7 @@ public class MqttRequester {
                     SensorDataManager.sharedInstance.data = sonars
                     SeatDataManager.sharedInstance.data = seat
                     NotificationCenter.default.post(name: Notification.Name("reloadChart"), object: nil)
+                    NotificationCenter.default.post(name: Notification.Name("testSeat"), object: nil)
                 } catch {
                     print(error.localizedDescription)
                 }
