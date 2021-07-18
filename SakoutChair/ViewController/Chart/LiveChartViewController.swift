@@ -71,9 +71,9 @@ class LiveChartViewController: UIViewController {
             
             //MARK: - LIVE HISTORY
             
-            var lineHistoryChartEntry1  = [ChartDataEntry]()
-            var lineHistoryChartEntry2  = [ChartDataEntry]()
-            var lineHistoryChartEntry3  = [ChartDataEntry]()
+            var lineHistoryChartEntry1 = [ChartDataEntry]()
+            var lineHistoryChartEntry2 = [ChartDataEntry]()
+            var lineHistoryChartEntry3 = [ChartDataEntry]()
             self.sonarTop.append(Double(numbers[0]))
             self.sonarMid.append(Double(numbers[1]))
             self.sonarBot.append(Double(numbers[2]))

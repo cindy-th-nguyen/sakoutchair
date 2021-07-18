@@ -46,9 +46,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.historyCollectionView.reloadData()
             }
         }
-        
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

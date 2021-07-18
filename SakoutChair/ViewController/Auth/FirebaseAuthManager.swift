@@ -18,7 +18,6 @@ public class FirebaseAuthManager {
     func createUser(name: String, email: String, password: String, completionBlock: @escaping (_ success: Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
             if let user = authResult?.user {
-                print(user)
                 self.ref = Database.database(url: "https://sakoutchair-default-rtdb.europe-west1.firebasedatabase.app/").reference()
                 let userData : [String : Any] = ["name": name,
                                                  "email": email,
