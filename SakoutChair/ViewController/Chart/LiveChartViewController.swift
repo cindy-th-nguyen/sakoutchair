@@ -12,6 +12,7 @@ class LiveChartViewController: UIViewController {
     
     @IBOutlet weak var liveBarChart: BarChartView!
     @IBOutlet weak var historyLiveChart: LineChartView!
+    @IBOutlet weak var headerView: UIView!
     
     var numbers : [Float] {
         get {
@@ -24,6 +25,7 @@ class LiveChartViewController: UIViewController {
     var sonarBot: [Double] = []
     
     override func viewDidLoad() {
+        headerView.backgroundColor = UIColor.CustomColor.customBeige
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = false

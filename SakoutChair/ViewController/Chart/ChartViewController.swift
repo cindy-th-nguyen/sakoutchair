@@ -33,7 +33,7 @@ class ChartViewController: UIViewController {
     }
     
     func updateChart() {
-        let sorted = orderSensorsByHour2()
+        let sorted = orderSensorsByHour()
         print(sorted)
         
         var lineChartEntry1 = [ChartDataEntry]()
@@ -72,7 +72,7 @@ class ChartViewController: UIViewController {
         lineChartView.data = data
     }
     
-    func orderSensorsByHour2() -> [[Float]] {
+    func orderSensorsByHour() -> [[Float]] {
         var refomatted : [String: [Float]] = ["":[]]
         let hoursArray = Dictionary(grouping: userSensorsDataArray, by: { $0.key.split(separator: ":").first! }).compactMap { $0.key }.sorted()
 
@@ -113,6 +113,10 @@ class ChartViewController: UIViewController {
             floatHours.append(Float(key) ?? 0)
         }
         
+        print(averageTops)
+        print(averageMids)
+        print(averageBots)
+
         return [
             averageTops,
             averageMids,

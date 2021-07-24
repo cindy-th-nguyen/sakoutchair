@@ -19,15 +19,25 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var historyCollectionView: UICollectionView!
     @IBOutlet weak var liveChartButton: UIButton!
     
-    var seatData : [Bool] {
+    var seatData: [Bool] {
         get {
             return SeatDataManager.sharedInstance.data
         }
     }
     
+    var sonarData: [Float] {
+        get {
+            return SensorDataManager.sharedInstance.data
+        }
+    }
+    var timer = Timer()
+    var counterSecondes = 0
+    var counterMinutes = 0
+    var counterHours = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCarousel()
+        startTimer()
         authManager.getCurrentUser { user in
             guard let user = user else { return }
             if !user.hasConfigure {
@@ -46,17 +56,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.historyCollectionView.reloadData()
             }
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(
-        self.testSeat(notification:)), name: Notification.Name("testSeat"),
-        object: nil)
-    }
-    
-    @objc func testSeat(notification: Notification)  {
-        print("test seat \(seatData)")
-        let timer = TimerController()
-        timer.startTimer()
-//        DispatchQueue.main.async {
-//        }
+        
+        if !seatData.contains(true) {
+            let slide = ZKCarouselSlide(image: UIImage(named: "work-slide"),          title: "Not connected",                                    description: "Connect your app with SakoutChair device to have full access of our features")
+            self.mainCarousel.slides = [slide]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,33 +87,76 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         mainCardView.layer.cornerRadius = 30
     }
     
-    private func setupCarousel() {
-        //TO DO: 
-        //        guard let userPayload = UserPayload.payload else {
-        //            return
-        //        }
-        authManager.getCurrentUser { user in
-            guard let user = user else { return }
-            if !user.hasConfigure {
-                let slide = ZKCarouselSlide(image: UIImage(named: "work-slide"),
-                                            title: "Not connected",
-                                            description: "Connect your app with SakoutChair device to have full access of our features")
-                self.mainCarousel.slides = [slide]
+    func startTimer() {
+        print("😛 startTimer")
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer.fire()
+    }
+    
+    @objc func timerAction(){
+        print("🪑 test seat \(seatData)")
+        if seatData.contains(true) {
+            counterSecondes += 1
+            if counterSecondes % 60 == 0 {
+                counterSecondes %= 60
+                counterMinutes += 1
+                if counterMinutes % 60 == 0 {
+                    counterMinutes %= 60
+                    counterHours += 1
+                }
+            }
+            var valueHour = "00"
+            var valueMin = "00"
+            var valueSec = "00"
+            if counterHours < 10 {
+                valueHour = "0\(counterHours)"
             } else {
-                let slide = ZKCarouselSlide(image: UIImage(named: "work-slide"),
-                                            title: "Good position",
-                                            description: "Your back position is good, keep going!")
-                let slide1 = ZKCarouselSlide(image: UIImage(named: "seated-slide"),
-                                             title: "Seat : ? - Back : ?",
-                                             description: "No data available")
-                let slide2 = ZKCarouselSlide(image: UIImage(named: "break-slide"),
-                                             title: "00:00",
-                                             description: "Stay focus on your work")
-                
-                self.mainCarousel.slides = [slide, slide1, slide2]
-                self.mainCarousel.stop()
+                valueHour = "\(counterHours)"
+            }
+            if counterMinutes < 10 {
+                valueMin = "0\(counterMinutes)"
+            } else {
+                valueMin = "\(counterMinutes)"
+            }
+            if counterSecondes < 10 {
+                valueSec = "0\(counterSecondes)"
+            } else {
+                valueSec = "\(counterSecondes)"
+            }
+            
+            let timerValue = "\(valueHour):\(valueMin):\(valueSec)"
+            setupCarousel(timerValue: timerValue)
+            
+            if counterMinutes % 60 == 0 && counterHours != 0 {
+                let alert = UIAlertController(title: "Take a break!", message: "It's recommended you take a break of 5 minutes every hour.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { action in
+                    self.counterHours = 0
+                    self.counterSecondes = 0
+                    self.counterMinutes = 0
+                }))
+                alert.addAction(UIAlertAction(title: "Later", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    private func setupCarousel(timerValue: String) {
+        var hasGoodPosition: Bool = false
+        guard let bottom = sonarData.first, let top = sonarData.last else { return }
+        let val: Float = bottom - top
+        hasGoodPosition = val < 10 ? true : false
+        let slide1 = ZKCarouselSlide(image: UIImage(named: "seated-slide"),
+                                     title: seatData.isEmpty && sonarData.isEmpty ? "No data available" : "Data available",
+                                     description: seatData.isEmpty && sonarData.isEmpty ? "Reconnect ..." : "Go to live chart")
+        let slide2 = ZKCarouselSlide(image: UIImage(named: "work-slide"),
+                                     title: hasGoodPosition ? "Good position" : "Bad position",
+                                     description: hasGoodPosition ? "Your back position is good, keep going!": "Fix your position")
+        let slide3 = ZKCarouselSlide(image: UIImage(named: "break-slide"),
+                                     title: timerValue,
+                                     description: "Stay focus on your work")
+        
+        self.mainCarousel.slides = [slide1, slide2, slide3]
+        self.mainCarousel.stop()
     }
     
     @IBAction func showHistoryDidTap(_ sender: Any) {
