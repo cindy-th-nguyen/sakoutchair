@@ -143,7 +143,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         var hasGoodPosition: Bool = false
         guard let bottom = sonarData.first, let top = sonarData.last else { return }
         let val: Float = bottom - top
-        hasGoodPosition = val < 10 ? true : false
+        hasGoodPosition = val < 9 ? true : false
         let slide1 = ZKCarouselSlide(image: UIImage(named: "seated-slide"),
                                      title: seatData.isEmpty && sonarData.isEmpty ? "No data available" : "Data available",
                                      description: seatData.isEmpty && sonarData.isEmpty ? "Reconnect ..." : "Go to live chart")
