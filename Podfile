@@ -10,9 +10,11 @@ target 'SakoutChair' do
   pod 'Firebase/Database'
   pod 'lottie-ios'
   pod 'ZKCarousel'
-  	pod 'Moscapsule', :git => 'https://github.com/flightonary/Moscapsule.git'
+  pod 'Moscapsule', :git => 'https://github.com/flightonary/Moscapsule.git'
   pod 'OpenSSL-Universal', '~> 1.0.1.20'
   pod 'Charts', '~> 3.6'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
 
   target 'SakoutChairTests' do
     inherit! :search_paths

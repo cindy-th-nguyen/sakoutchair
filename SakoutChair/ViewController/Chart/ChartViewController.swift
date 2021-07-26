@@ -80,7 +80,7 @@ class ChartViewController: UIViewController {
             var total : [Float] = [0,0,0,0]
             for data in userSensorsDataArray {
                 let splitedHour: String = String(data.key.split(separator: ":").first!)
-                if hour == splitedHour {
+                if (hour == splitedHour) && (!data.value.sonar.isEmpty) {
 
                     total[0] += data.value.sonar[0]
                     total[1] += data.value.sonar[1]

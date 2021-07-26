@@ -382,6 +382,7 @@
 				7BF5F37D26356244009FC0DC /* Frameworks */,
 				7BF5F37E26356244009FC0DC /* Resources */,
 				517EA0A39499079A093DC12D /* [CP] Embed Pods Frameworks */,
+				7BC2AAF926AEC4050026352F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -542,6 +543,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SakoutChair/Pods-SakoutChair-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		7BC2AAF926AEC4050026352F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		8EB16DCB04231C463A35AE89 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -815,6 +835,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9V7TP3PAUD;
 				INFOPLIST_FILE = SakoutChair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -835,6 +856,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9V7TP3PAUD;
 				INFOPLIST_FILE = SakoutChair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

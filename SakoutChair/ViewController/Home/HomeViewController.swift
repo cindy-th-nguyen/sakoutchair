@@ -94,7 +94,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     @objc func timerAction(){
-        print("🪑 test seat \(seatData)")
         if seatData.contains(true) {
             counterSecondes += 1
             if counterSecondes % 60 == 0 {
