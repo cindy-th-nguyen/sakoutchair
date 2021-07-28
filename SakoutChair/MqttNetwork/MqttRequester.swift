@@ -57,6 +57,10 @@ public class MqttRequester {
                     print(error.localizedDescription)
                 }
             }
+            
+            if mqttMessage.topic == "sakoutcher/test/isHere" {
+                IsHereDataManager.sharedInstance.data = Bool(msg) ?? false
+            }
         }
         mqttConfig.onSubscribeCallback = { (messageId, grantedQos) in
             print("subscribed (mid=\(messageId),grantedQos=\(grantedQos))")

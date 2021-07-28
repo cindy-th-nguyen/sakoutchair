@@ -40,7 +40,6 @@ class Payload: Codable {
     }
 }
 
-
 class SensorDataManager {
     var data:[Float] = [0,0,0]
     static let sharedInstance: SensorDataManager = {
@@ -53,6 +52,14 @@ class SeatDataManager {
     var data: [Bool] = [false, false]
     static let sharedInstance: SeatDataManager = {
         let instance = SeatDataManager()
+        return instance
+    }()
+}
+
+class IsHereDataManager {
+    var data: Bool = false
+    static let sharedInstance: IsHereDataManager = {
+        let instance = IsHereDataManager()
         return instance
     }()
 }

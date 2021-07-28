@@ -39,7 +39,6 @@ class LiveChartViewController: UIViewController {
         updateChart(notification: Notification(name: Notification.Name("reloadChart")))
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }

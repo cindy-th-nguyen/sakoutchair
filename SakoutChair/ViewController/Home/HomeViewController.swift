@@ -25,6 +25,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
+    var isHere: Bool {
+        get {
+            return IsHereDataManager.sharedInstance.data
+        }
+    }
+    
     var sonarData: [Float] {
         get {
             return SensorDataManager.sharedInstance.data
@@ -49,6 +55,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             return
         }
         mqttClient.subscribe("sakoutcher/test/payload", qos: 0)
+        mqttClient.subscribe("sakoutcher/test/isHere", qos: 0)
         authManager.getDataHistoryByUser { [weak self] payloadData in
             guard let self = self else { return }
             self.userSensorsDataArray = payloadData
@@ -88,13 +95,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func startTimer() {
-        print("😛 startTimer")
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         timer.fire()
     }
     
     @objc func timerAction(){
-        if seatData.contains(true) {
+        if isHere {
             counterSecondes += 1
             if counterSecondes % 60 == 0 {
                 counterSecondes %= 60
@@ -126,7 +132,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             let timerValue = "\(valueHour):\(valueMin):\(valueSec)"
             setupCarousel(timerValue: timerValue)
             
-            if counterMinutes % 60 == 0 && counterHours != 0 {
+            if counterSecondes % 60 == 0 && counterMinutes != 0 {
                 let alert = UIAlertController(title: "Take a break!", message: "It's recommended you take a break of 5 minutes every hour.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { action in
                     self.counterHours = 0
