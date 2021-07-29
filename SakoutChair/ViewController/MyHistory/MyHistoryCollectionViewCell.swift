@@ -17,8 +17,8 @@ class MyHistoryCollectionViewCell: UICollectionViewCell {
         self.backView.backgroundColor = UIColor.CustomColor.customBeige
         self.stateLabel.textColor = UIColor.CustomColor.customDarkBlue
         self.dateLabel.textColor = UIColor.CustomColor.customDarkBlue
-        self.stateLabel.text = hadGoodPosition ? "Good" : "Bad"
+        self.stateLabel.text = "Data received"
         self.dateLabel.text = date
-        self.stateImage.image = hadGoodPosition ? UIImage(named: "good-position") : UIImage(named: "bad-position")
+        self.stateImage.image = UIImage(named: "good-position")
     }
 }

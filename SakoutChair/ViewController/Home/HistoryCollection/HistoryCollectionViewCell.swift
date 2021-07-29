@@ -18,8 +18,8 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     }
 
     func configureCell(date: String, hadGoodPosition: Bool) {
-        self.nameLabel.text = hadGoodPosition ? "Good" : "Bad"
+        self.nameLabel.text = "Data received"
         self.dateLabel.text = date
-        self.averageDayImage.image = hadGoodPosition ? UIImage(named: "good-position") : UIImage(named: "bad-position")
+        self.averageDayImage.image = UIImage(named: "good-position")
     }
 }
